@@ -57,6 +57,12 @@ O jogo utiliza **pixel art** para representar o ambiente escolar com charme, nos
 
 Projeto desenvolvido pelos(as) alunos(as) de Análise e Desenvolvimento de Sistemas – IFPI Pedro II.
 
+Paloma Santiago
+Naiara Nicole
+Jhenifer do Nascimento Costa 
+Rodrigo Freitas Mendes
+Isadora Sousa
+
 ---
 
 ## 📌 Status
