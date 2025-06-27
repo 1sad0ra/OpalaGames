@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://co7rvykueh0wp"]
+[gd_scene load_steps=28 format=3 uid="uid://co7rvykueh0wp"]
 
 [ext_resource type="Texture2D" uid="uid://g1xcs7jsdm4q" path="res://assets/Personagens/Player_Socram/Socram_pixilart-sprite.png" id="1_0nm8a"]
 [ext_resource type="Script" uid="uid://da02e7180g5ss" path="res://scripts/estado_maquina/node_state_machine.gd" id="2_74wcc"]
 [ext_resource type="Script" uid="uid://bohb3bxxx60fv" path="res://cenas/caracteristicas/player/idle_state.gd" id="3_2231b"]
+[ext_resource type="Script" uid="uid://cttcm80ukjm1w" path="res://cenas/caracteristicas/player/wal_state.gd" id="4_2231b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrlbt"]
 atlas = ExtResource("1_0nm8a")
@@ -170,7 +171,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_r0bgb")
 }],
 "loop": true,
-"name": &"walk_legt",
+"name": &"walk_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -203,19 +204,23 @@ height = 26.0
 texture_filter = 1
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_sb7gc")
-animation = &"idle_front"
+animation = &"walk_left"
 autoplay = "idle_front"
-frame_progress = 0.466469
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_4t12s")
 
-[node name="State_machin" type="Node2D" parent="." node_paths=PackedStringArray("initial_node_state")]
+[node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_74wcc")
 initial_node_state = NodePath("idle")
 
-[node name="idle" type="Node" parent="State_machin" node_paths=PackedStringArray("player", "animated_sprit_2d")]
+[node name="idle" type="Node" parent="state_machine" node_paths=PackedStringArray("player", "animated_sprit_2d")]
 script = ExtResource("3_2231b")
 player = NodePath("../..")
 animated_sprit_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="walk" type="Node" parent="state_machine" node_paths=PackedStringArray("player", "animated_sprit2d")]
+script = ExtResource("4_2231b")
+player = NodePath("../..")
+animated_sprit2d = NodePath("../../AnimatedSprite2D")
