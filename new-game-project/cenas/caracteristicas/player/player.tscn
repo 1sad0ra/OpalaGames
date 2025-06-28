@@ -202,13 +202,14 @@ height = 26.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -13)
+position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_sb7gc")
 animation = &"walk_left"
 autoplay = "idle_front"
+frame_progress = 0.68844
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_4t12s")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
@@ -224,3 +225,6 @@ animated_sprit_2d = NodePath("../../AnimatedSprite2D")
 script = ExtResource("4_2231b")
 player = NodePath("../..")
 animated_sprit2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
