@@ -1,0 +1,194 @@
+[gd_scene load_steps=10 format=3 uid="uid://dll8nx3bt3avy"]
+
+[ext_resource type="Texture2D" uid="uid://b28swfbq14xi3" path="res://assets/Mapa/esbocosemcamadas (2).png" id="1_gka14"]
+[ext_resource type="Script" uid="uid://diwbswfpf7hut" path="res://scripts/ui/tela_incial.gd" id="1_rikrs"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="2_rikrs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmdr4"]
+bg_color = Color(1, 1, 1, 0.784314)
+shadow_color = Color(0.915189, 0.915189, 0.915189, 0.835294)
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gka14"]
+bg_color = Color(1, 1, 1, 0.392157)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rikrs"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.128344, 0.128344, 0.128344, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(6, 0)
+
+[sub_resource type="Animation" id="Animation_5rqjt"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.41714),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.458824, 0.458824, 0.458824, 0), Color(0.458405, 0.458405, 0.458405, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.572977),
+"transitions": PackedFloat32Array(2.07053, 0.784584),
+"update": 0,
+"values": [Vector2(-420, 5), Vector2(0, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_rikrs"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.306923, 0.306923, 0.306923, 0), Color(0.633757, 0.633757, 0.633757, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.566667, 0.933333),
+"transitions": PackedFloat32Array(2.46229, 2.37842),
+"update": 0,
+"values": [Vector2(-410, 5), Vector2(0, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hmdr4"]
+_data = {
+&"RESET": SubResource("Animation_5rqjt"),
+&"reveal": SubResource("Animation_rikrs")
+}
+
+[node name="tela_incial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rikrs")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.458824, 0.458824, 0.458824, 0)
+layout_mode = 2
+offset_left = 1.0
+offset_top = -155.0
+offset_right = 1051.0
+offset_bottom = 585.0
+size_flags_horizontal = 4
+texture = ExtResource("1_gka14")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -175.0
+offset_right = -1.0
+offset_bottom = 179.0
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="titulo_Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.1812, 0.1812, 0.1812, 1)
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_rikrs")
+theme_override_font_sizes/font_size = 60
+text = "Reconexão"
+horizontal_alignment = 1
+
+[node name="subtitulo_Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.1812, 0.1812, 0.1812, 1)
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_rikrs")
+theme_override_font_sizes/font_size = 20
+text = "A jornada de um professor"
+
+[node name="jogar_Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rikrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
+text = "Jogar"
+
+[node name="conf_Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rikrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
+text = "Configuracao"
+
+[node name="Sair_Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rikrs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
+text = "Sair"
+
+[node name="anime" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hmdr4")
+}
+autoplay = "reveal"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/jogar_Button1" to="." method="_on_jogar_button_1_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/conf_Button2" to="." method="_on_conf_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Sair_Button3" to="." method="_on_sair_button_3_pressed"]
