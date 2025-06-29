@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://g1xcs7jsdm4q" path="res://assets/Personagens/Player_Socram/Socram_pixilart-sprite.png" id="1_0nm8a"]
 [ext_resource type="Script" uid="uid://da02e7180g5ss" path="res://scripts/state_machine/node_state_machine.gd" id="2_74wcc"]
 [ext_resource type="Script" uid="uid://bohb3bxxx60fv" path="res://cenas/caracteristicas/player/idle_state.gd" id="3_2231b"]
+[ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
 
 [ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
 
@@ -219,7 +220,10 @@ script = ExtResource("2_74wcc")
 initial_node_state = NodePath("idle")
 
 
-[node name="idle" type="Node" parent="state_machine" node_paths=PackedStringArray("player", "animated_sprit_2d")]
+[node name="walk" type="Node" parent="State_machin"]
+script = ExtResource("3_j1rc3")
+
+[node name="idle" type="Node" parent="State_machin" node_paths=PackedStringArray("player", "animated_sprit_2d")]
 
 script = ExtResource("3_2231b")
 player = NodePath("../..")
