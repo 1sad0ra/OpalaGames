@@ -15,7 +15,9 @@ func _on_physics_process(_delta : float) -> void:
 	# game_script, essa variavel corresponde a uma função
 
 
+
 	var direction : Vector2 = GameInput.movement_Input()
+
 
 
 
@@ -35,7 +37,9 @@ func _on_physics_process(_delta : float) -> void:
 func _on_next_transitions() -> void:
 
 
+
 	if !GameInput.is_movement_input():
+
 
 
 		transition.emit("idle")

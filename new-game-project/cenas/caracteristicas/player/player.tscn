@@ -5,7 +5,9 @@
 [ext_resource type="Script" uid="uid://bohb3bxxx60fv" path="res://cenas/caracteristicas/player/idle_state.gd" id="3_2231b"]
 [ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
 
+
 [ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
+
 
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrlbt"]

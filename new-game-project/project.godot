@@ -12,8 +12,10 @@ config_version=5
 
 
 
+
 config/name="opala_game"
 run/main_scene="uid://dxo8lhle5ekp"
+
 
 
 config/features=PackedStringArray("4.4", "Forward Plus")
