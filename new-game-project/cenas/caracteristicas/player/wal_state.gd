@@ -13,7 +13,9 @@ func _on_process(_delta : float) -> void:
 func _on_physics_process(_delta : float) -> void:
 	#cria a variavel direção e diz que ela corresponde a vector2, que também iguala seu valor ao GameInput que é uma variavel do script
 	# game_script, essa variavel corresponde a uma função
+
 	var direction : Vector2 = GameInput.movement_Input()
+
 	#se a direção for igual a UP(cima), ele vira de costas
 	if direction == Vector2.UP:
 		animated_sprit2d.play("walk_back")
@@ -28,7 +30,9 @@ func _on_physics_process(_delta : float) -> void:
 	player.move_and_slide()
 
 func _on_next_transitions() -> void:
+
 	if !GameInput.is_movement_input():
+
 		transition.emit("idle")
 
 
