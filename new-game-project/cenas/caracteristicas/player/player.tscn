@@ -6,7 +6,9 @@
 [ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
 
 
+
 [ext_resource type="Script" path="res://cenas/caracteristicas/player/wal_state.gd" id="3_j1rc3"]
+
 
 
 
@@ -220,6 +222,8 @@ shape = SubResource("CapsuleShape2D_4t12s")
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_74wcc")
 initial_node_state = NodePath("idle")
+
+
 
 
 [node name="walk" type="Node" parent="State_machin"]
