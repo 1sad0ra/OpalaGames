@@ -10,8 +10,16 @@ func _on_process(_delta : float) -> void:
 
 
 func _on_physics_process(_delta : float) -> void:
-	
-	direction= GameInput.movement_Input()
+	if Input.is_action_pressed("esquerda"):
+		direction= Vector2.LEFT
+	elif  Input.is_action_pressed("direita"):
+		direction= Vector2.RIGHT
+	elif  Input.is_action_pressed("cima"):
+		direction= Vector2.UP
+	elif  Input.is_action_pressed("baixo"):
+		direction= Vector2.DOWN
+	else:
+		direction = Vector2.ZERO
 	
 	if direction == Vector2.UP:
 		animated_sprit_2d.play("idle_back")
@@ -24,13 +32,8 @@ func _on_physics_process(_delta : float) -> void:
 	else:
 		animated_sprit_2d.play("idle_front")	
 		
-		
-		
 func _on_next_transitions() -> void:
-	GameInput.movement_Input()
-	
-	if GameInput.is_movement_input():
-		transition.emit("walk")
+	pass
 
 
 func _on_enter() -> void:

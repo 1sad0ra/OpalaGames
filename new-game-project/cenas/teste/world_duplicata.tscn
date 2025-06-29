@@ -1,18 +1,11 @@
-
 [gd_scene load_steps=5 format=4 uid="uid://dxo8lhle5ekp"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_5be8a"]
 [ext_resource type="PackedScene" uid="uid://co7rvykueh0wp" path="res://cenas/caracteristicas/player/player.tscn" id="2_50l1b"]
 [ext_resource type="Script" uid="uid://bum832614m533" path="res://cenas/caracteristicas/player/player.gd" id="3_efby6"]
-[ext_resource type="PackedScene" uid="uid://bmv3hppwq3gsw" path="res://cenas/teste/porta.tscn" id="2_yhgph"]
 [ext_resource type="PackedScene" uid="uid://jsx606fybcpx" path="res://player.tscn" id="4_xfp62"]
 
-
 [node name="world" type="Node2D"]
-
-[node name="Node2D" parent="." instance=ExtResource("2_yhgph")]
-position = Vector2(-52, -45)
-destino = "res://cenas/teste/novafaseteste.tscn"
 
 [node name="gameTileMap" type="Node2D" parent="."]
 
