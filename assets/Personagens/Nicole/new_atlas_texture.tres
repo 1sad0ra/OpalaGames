@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://rt6xp671kvm6"]
-
-[ext_resource type="Texture2D" uid="uid://dvl7c138ff11m" path="res://assets/Personagens/Nicole/Nicole_pixilart-sprite.png" id="1_8ro4w"]
-
-[resource]
-atlas = ExtResource("1_8ro4w")
-region = Rect2(64, 0, 32, 32)

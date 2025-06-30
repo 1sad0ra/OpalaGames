@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cgomdvixh2lp5"]
-
-[ext_resource type="Texture2D" uid="uid://bsd1vcd43lool" path="res://assets/Personagens/Janne/Jenni_pixilart-sprite.png" id="1_p5hjq"]
-
-[resource]
-atlas = ExtResource("1_p5hjq")
-region = Rect2(64, 0, 32, 32)
