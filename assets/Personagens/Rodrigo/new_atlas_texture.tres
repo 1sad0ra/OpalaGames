@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bknvelsstx2jb"]
-
-[ext_resource type="Texture2D" uid="uid://cpniq7i3cp11n" path="res://assets/Personagens/Rodrigo/Rodrigo_pixilart-sprite.png" id="1_e5aoj"]
-
-[resource]
-atlas = ExtResource("1_e5aoj")
-region = Rect2(0, 0, 32, 32)
