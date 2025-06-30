@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://chj13qyu45hrm"]
+
+[ext_resource type="Texture2D" uid="uid://g1xcs7jsdm4q" path="res://assets/Personagens/Player_Socram/Socram_pixilart-sprite.png" id="1_vbjkv"]
+
+[resource]
+atlas = ExtResource("1_vbjkv")
+region = Rect2(0, 0, 32, 32)
