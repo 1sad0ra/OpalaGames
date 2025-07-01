@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://bsg3u25etbs1d"]
+[gd_scene load_steps=28 format=3 uid="uid://bsg3u25etbs1d"]
 
 [ext_resource type="Texture2D" uid="uid://g1xcs7jsdm4q" path="res://assets/Personagens/Player_Socram/Socram_pixilart-sprite.png" id="1_0nm8a"]
 [ext_resource type="Script" uid="uid://da02e7180g5ss" path="res://scripts/estado_maquina/node_state_machine.gd" id="2_74wcc"]
 [ext_resource type="Script" uid="uid://cvyqbbr5rqkfy" path="res://cenas/caracteristicas/player/walk_state.gd" id="3_74wcc"]
 [ext_resource type="Script" uid="uid://ba20rspda3p2j" path="res://cenas/caracteristicas/player/idle_state.gd" id="3_2231b"]
+[ext_resource type="AudioStream" uid="uid://db6eum5105vgt" path="res://sounds/passos.mp3" id="5_j1rc3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nm8a"]
 atlas = ExtResource("1_0nm8a")
@@ -202,6 +203,7 @@ animation = &"idle_rigth"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_j58ch")
 
@@ -220,3 +222,6 @@ player = NodePath("../..")
 animated_sprit2d = NodePath("../../AnimatedSprite2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="passos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_j1rc3")

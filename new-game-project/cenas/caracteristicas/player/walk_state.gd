@@ -5,6 +5,9 @@ extends NodeState
 @export var animated_sprit2d :AnimatedSprite2D
 #variavel para a velocoade 
 @export var speed : int = 50
+@export var passos: AudioStreamPlayer2D 
+
+
 
 func _on_process(_delta : float) -> void:
 	pass

@@ -2,7 +2,7 @@ extends NodeState
 
 @export var player: CharacterBody2D
 @export var animated_sprit2d: AnimatedSprite2D
-
+@export var passos: AudioStreamPlayer2D 
 var direction : Vector2
 
 func _on_process(_delta : float) -> void:
