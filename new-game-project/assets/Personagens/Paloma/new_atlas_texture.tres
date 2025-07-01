@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dwvnfophqajy2"]
+
+[ext_resource type="Texture2D" uid="uid://dwlelquy1asq7" path="res://assets/Personagens/Paloma/Paloma_pixilart-sprite.png" id="1_qq0iy"]
+
+[resource]
+atlas = ExtResource("1_qq0iy")
+region = Rect2(0, 0, 32, 32)

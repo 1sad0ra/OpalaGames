@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c35fej0lrihna"]
+
+[ext_resource type="Texture2D" uid="uid://4m8t05lh3wq3" path="res://assets/Personagens/Willames/Willames_pixilart-sprite.png" id="1_we7gk"]
+
+[resource]
+atlas = ExtResource("1_we7gk")
+region = Rect2(32, 0, 32, 32)

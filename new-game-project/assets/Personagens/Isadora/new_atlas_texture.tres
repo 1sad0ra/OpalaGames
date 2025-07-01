@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ckxkpo48mujqf"]
+
+[ext_resource type="Texture2D" uid="uid://ebnr6dstakrp" path="res://assets/Personagens/Isadora/Isadora_pixilart-sprite.png" id="1_lni0h"]
+
+[resource]
+atlas = ExtResource("1_lni0h")
+region = Rect2(32, 0, 32, 32)
