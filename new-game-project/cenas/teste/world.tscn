@@ -51,3 +51,4 @@ position = Vector2(37, 476)
 
 [node name="porta" parent="." instance=ExtResource("3_otrou")]
 position = Vector2(-36, 448)
+destino = "res://cenas/teste/sala_tutorial.tscn"

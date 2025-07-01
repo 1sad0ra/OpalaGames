@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bbohk67gdggsl"]
+[gd_scene load_steps=21 format=3 uid="uid://bbohk67gdggsl"]
 
 [ext_resource type="Texture2D" uid="uid://cdvjqrg0piac5" path="res://assets/Mapa/animaçao-porta1.png" id="1_qe45y"]
 [ext_resource type="Script" uid="uid://dgpfv445wkoaf" path="res://cenas/teste/porta.gd" id="1_rlmal"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cuv0qr0mfxmq0" path="res://assets/Mapa/animaçao-porta4.png" id="4_yx5in"]
 [ext_resource type="Texture2D" uid="uid://3fmfuywm3tda" path="res://assets/Mapa/animaçao-porta5.png" id="5_0au6g"]
 [ext_resource type="Texture2D" uid="uid://7vyi1xc0yub6" path="res://assets/Mapa/animaçao-porta6.png" id="6_q7gt1"]
+[ext_resource type="AudioStream" uid="uid://dphfbu55h0yo1" path="res://sounds/portaAbrindo.wav" id="8_u5vwi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oq5yi"]
 radius = 11.0
@@ -57,7 +58,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_byaiu")
 }],
 "loop": true,
-"name": &"default",
+"name": &"porta",
 "speed": 5.0
 }]
 
@@ -70,10 +71,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0.11, 0.81, 1.75, 2.37, 3.18, 3.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": []
+"values": [SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl")]
 }
 
 [sub_resource type="Animation" id="Animation_0sp72"]
@@ -111,16 +112,22 @@ shape = SubResource("CircleShape2D_oq5yi")
 texture_filter = 1
 position = Vector2(3, -8)
 sprite_frames = SubResource("SpriteFrames_ptwwl")
-frame = 3
-frame_progress = 0.572766
+animation = &"porta"
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_kg6sy")
 }
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_u5vwi")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-1, -14)
 shape = SubResource("CircleShape2D_lh7eq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
