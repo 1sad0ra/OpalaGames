@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://kqjvdlw2m74d"]
+[gd_scene load_steps=5 format=4 uid="uid://kqjvdlw2m74d"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_jx82w"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="2_7qx2m"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_b0oyg"]
+[ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_o085d"]
 
 [node name="salaTutorial" type="Node2D"]
 
@@ -81,3 +82,5 @@ destino = "res://cenas/teste/world.tscn"
 
 [node name="player" parent="." instance=ExtResource("2_7qx2m")]
 position = Vector2(492, 109)
+
+[node name="pause_menu" parent="." instance=ExtResource("4_o085d")]

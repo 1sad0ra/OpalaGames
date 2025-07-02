@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dll8nx3bt3avy"]
 
 [ext_resource type="Texture2D" uid="uid://b28swfbq14xi3" path="res://assets/Mapa/esbocosemcamadas (2).png" id="1_gka14"]
-[ext_resource type="Script" uid="uid://diwbswfpf7hut" path="res://scripts/ui/tela_incial.gd" id="1_rikrs"]
+[ext_resource type="Script" uid="uid://diwbswfpf7hut" path="res://scripts/ui_scripts/tela_incial.gd" id="1_rikrs"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="2_rikrs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmdr4"]
@@ -10,7 +10,7 @@ shadow_color = Color(0.915189, 0.915189, 0.915189, 0.835294)
 shadow_offset = Vector2(0, 6)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gka14"]
-bg_color = Color(1, 1, 1, 0.392157)
+bg_color = Color(1, 1, 1, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rikrs"]
@@ -148,26 +148,12 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.401968, 0.401968, 0.401968, 1)
 theme_override_fonts/font = ExtResource("2_rikrs")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
 text = "Jogar"
-
-[node name="conf_Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_rikrs")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
-theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
-text = "Configuracao"
 
 [node name="Sair_Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
@@ -181,7 +167,7 @@ theme_override_fonts/font = ExtResource("2_rikrs")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hmdr4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
-text = "Sair"
+text = "Sair do Jogo"
 
 [node name="anime" type="AnimationPlayer" parent="."]
 libraries = {
@@ -190,5 +176,4 @@ libraries = {
 autoplay = "reveal"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/jogar_Button1" to="." method="_on_jogar_button_1_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/conf_Button2" to="." method="_on_conf_button_2_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Sair_Button3" to="." method="_on_sair_button_3_pressed"]
