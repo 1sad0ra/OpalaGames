@@ -9,7 +9,7 @@ func _process(delta):
 
 
 func _on_jogar_button_1_pressed():
-	get_tree().change_scene_to_file("res://cenas/teste/world_player.tscn")
+	get_tree().change_scene_to_file("res://cenas/teste/world.tscn")
 
 func _on_conf_button_2_pressed():
 	pass # Replace with function body.

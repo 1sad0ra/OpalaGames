@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://1alig4m0bgfe"]
+
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="1_4p0wh"]
+[ext_resource type="Script" uid="uid://b5d6bxa7r0csu" path="res://scripts/ui_scripts/pause_menu.gd" id="1_l31ko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l31ko"]
+bg_color = Color(1, 1, 1, 0.203922)
+border_color = Color(1, 1, 1, 0.117647)
+shadow_color = Color(0.915189, 0.915189, 0.915189, 0.835294)
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krjn7"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfxr3"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.128344, 0.128344, 0.128344, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(6, 0)
+
+[sub_resource type="InputEventAction" id="InputEventAction_l31ko"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_krjn7"]
+events = [SubResource("InputEventAction_l31ko")]
+
+[node name="pause_menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_l31ko")
+
+[node name="bg_overlay" type="ColorRect" parent="."]
+modulate = Color(0.247059, 0.247059, 0.247059, 0.364706)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_holder" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Voltar_Button1" type="Button" parent="menu_holder"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_4p0wh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l31ko")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krjn7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfxr3")
+shortcut = SubResource("Shortcut_krjn7")
+text = "Voltar"
+
+[node name="Menu_Button2" type="Button" parent="menu_holder"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_4p0wh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l31ko")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_krjn7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sfxr3")
+text = "Tela Inicial"
+
+[connection signal="pressed" from="menu_holder/Voltar_Button1" to="." method="_on_voltar_button_1_pressed"]
+[connection signal="pressed" from="menu_holder/Menu_Button2" to="." method="_on_menu_button_2_pressed"]

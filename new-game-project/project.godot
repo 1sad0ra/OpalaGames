@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="New Game Project"
-run/main_scene="uid://dxo8lhle5ekp"
+run/main_scene="uid://dll8nx3bt3avy"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,7 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
-window/stretch/scale=2.0
+window/stretch/scale=0.5
 window/stretch/scale_mode="integer"
 
 [dotnet]
@@ -33,10 +33,11 @@ project/assembly_name="New Game Project"
 [file_customization]
 
 folder_colors={
-"res://TileSets/": "green",
+"res://TileSets/": "teal",
 "res://assets/": "red",
 "res://cenas/": "orange",
-"res://scripts/": "yellow"
+"res://scripts/": "yellow",
+"res://sounds/": "green"
 }
 
 [input]
