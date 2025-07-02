@@ -58,7 +58,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_byaiu")
 }],
 "loop": true,
-"name": &"porta",
+"name": &"abrir",
 "speed": 5.0
 }]
 
@@ -67,29 +67,30 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("SpriteFrames_ptwwl")]
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_dbd3l"]
 resource_name = "abrir"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:sprite_frames")
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.11, 0.81, 1.75, 2.37, 3.18, 3.98),
+"times": PackedFloat32Array(0.0666667, 0.333333, 0.566667, 0.8, 1.03333, 1.23333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl"), SubResource("SpriteFrames_ptwwl")]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kg6sy"]
@@ -112,8 +113,7 @@ shape = SubResource("CircleShape2D_oq5yi")
 texture_filter = 1
 position = Vector2(3, -8)
 sprite_frames = SubResource("SpriteFrames_ptwwl")
-animation = &"porta"
-frame = 5
+animation = &"abrir"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
