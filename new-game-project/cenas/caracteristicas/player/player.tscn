@@ -190,8 +190,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j58ch"]
-radius = 9.0
-height = 22.0
+radius = 4.0
+height = 10.0
 
 [node name="player" type="CharacterBody2D"]
 
@@ -203,8 +203,7 @@ animation = &"idle_rigth"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -12)
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_j58ch")
 
 [node name="stateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]

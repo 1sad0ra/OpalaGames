@@ -4,7 +4,7 @@ extends NodeState
 #cria uma variavel para o sprit
 @export var animated_sprit2d :AnimatedSprite2D
 #variavel para a velocoade 
-@export var speed : int = 50
+@export var speed : int = 150
 @export var passos: AudioStreamPlayer2D 
 
 

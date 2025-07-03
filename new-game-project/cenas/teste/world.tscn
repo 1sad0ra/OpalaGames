@@ -55,3 +55,4 @@ position = Vector2(-36, 448)
 destino = "res://cenas/teste/sala_tutorial.tscn"
 
 [node name="pause_menu" parent="." instance=ExtResource("4_favmu")]
+visible = false
