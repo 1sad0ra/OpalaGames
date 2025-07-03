@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://dgoy1fogkmv36"]
+[gd_scene load_steps=6 format=4 uid="uid://dgoy1fogkmv36"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="2_ehqlt"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_otrou"]
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_favmu"]
+[ext_resource type="PackedScene" uid="uid://bnsql2jdjgxs" path="res://cenas/teste/objetos_terreno.tscn" id="5_jt30a"]
 
 [node name="world" type="Node2D"]
 
@@ -47,12 +48,19 @@ tile_set = ExtResource("1_f3sb7")
 [node name="poste" type="TileMapLayer" parent="gameTileMap"]
 tile_set = ExtResource("1_f3sb7")
 
-[node name="player" parent="." instance=ExtResource("2_ehqlt")]
-position = Vector2(37, 476)
-
 [node name="porta" parent="." instance=ExtResource("3_otrou")]
 position = Vector2(-36, 448)
 destino = "res://cenas/teste/sala_tutorial.tscn"
 
 [node name="pause_menu" parent="." instance=ExtResource("4_favmu")]
 visible = false
+
+[node name="Ysort" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+
+[node name="player" parent="Ysort" instance=ExtResource("2_ehqlt")]
+position = Vector2(203, 445)
+
+[node name="objetosTerreno" parent="Ysort" instance=ExtResource("5_jt30a")]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAMABsAAAAFAAQAAAApAAgAAAAFAAQAAAAqABsAAAAFAAQAAAAJABsAAAAFAAQAAAAKAAgAAAAFAAQAAAASAA0AAAAFAAQAAAASABQAAAAFAAQAAAAhABQAAAAFAAQAAAAhAA0AAAAFAAQAAAA=")

@@ -102,7 +102,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_lh7eq"]
 radius = 10.0499
 
-[node name="porta" type="Area2D"]
+[node name="porta" type="Area2D" groups=["paper"]]
 script = ExtResource("1_rlmal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
