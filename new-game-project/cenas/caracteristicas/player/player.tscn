@@ -138,7 +138,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_back",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,7 +152,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_front",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -169,7 +169,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -186,12 +186,12 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_rigth",
-"speed": 3.0
+"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j58ch"]
-radius = 9.0
-height = 22.0
+radius = 4.0
+height = 10.0
 
 [node name="player" type="CharacterBody2D"]
 
@@ -199,12 +199,13 @@ height = 22.0
 texture_filter = 1
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_u1gk2")
-animation = &"idle_rigth"
+animation = &"walk_rigth"
 autoplay = "idle_front"
+frame = 3
+frame_progress = 0.866951
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -12)
+position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_j58ch")
 
 [node name="stateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]

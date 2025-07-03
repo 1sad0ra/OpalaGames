@@ -23,7 +23,7 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
-window/stretch/scale=0.5
+window/stretch/scale=1.87
 window/stretch/scale_mode="integer"
 
 [dotnet]

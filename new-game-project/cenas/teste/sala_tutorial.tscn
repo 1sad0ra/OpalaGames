@@ -84,3 +84,4 @@ destino = "res://cenas/teste/world.tscn"
 position = Vector2(492, 109)
 
 [node name="pause_menu" parent="." instance=ExtResource("4_o085d")]
+visible = false
