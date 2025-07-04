@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_o085d"]
 [ext_resource type="Script" uid="uid://duaw5cy3ytbde" path="res://cenas/teste/fase_1.gd" id="6_386iv"]
 [ext_resource type="PackedScene" uid="uid://b6yp8upnbapxr" path="res://cenas/enigmas/enigma_1.tscn" id="6_aicvf"]
-[ext_resource type="PackedScene" uid="uid://b8awerygisss0" path="res://cenas/enigmas/ui_papel.tscn" id="8_2dyqj"]
+[ext_resource type="PackedScene" uid="uid://7r8mt1ko880h" path="res://cenas/enigmas/ui_papel.tscn" id="8_2dyqj"]
 
 [sub_resource type="GDScript" id="GDScript_tfqeb"]
 

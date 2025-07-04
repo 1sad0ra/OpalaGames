@@ -1,13 +1,23 @@
 extends CanvasLayer
 
-@onready var imagem = $Imagem
-@onready var texto = $Texto
-@onready var fechar = $Fechar
+@onready var imagem: TextureRect = $Imagem
+@onready var texto: Label = $Texto
+
+@export var ppaper_texture : Texture2D
+
+
+func _ready() -> void:
+	
+	visible = false 
+
 
 func show_paper(texture: Texture2D, text: String):
+	
+	var Imagem = preload("res://assets/Personagens/Paloma/new_atlas_texture.tres")
+
 	visible = true
-	imagem.texture = texture
+	imagem.texture = Imagem
 	texto.text = text
 
-func _on_Fechar_pressed():
+func fechar():
 	visible = false
