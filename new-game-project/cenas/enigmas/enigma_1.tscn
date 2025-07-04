@@ -19,3 +19,4 @@ region_rect = Rect2(177.426, 176.876, 14.7674, 14.5828)
 shape = SubResource("CircleShape2D_6fe17")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

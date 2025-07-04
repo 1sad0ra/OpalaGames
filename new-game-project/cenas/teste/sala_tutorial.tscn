@@ -91,6 +91,7 @@ visible = false
 [node name="fase1" type="Node2D" parent="."]
 
 [node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
+visible = false
 
 [node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
 position = Vector2(460, 100)
