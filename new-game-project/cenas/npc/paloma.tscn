@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dy0fvin8fma8x"]
 
-[ext_resource type="Script" uid="uid://b3m5acuc2t2vx" path="res://cenas/cenas_npc/paloma.gd" id="1_b4xfa"]
+[ext_resource type="Script" uid="uid://b3m5acuc2t2vx" path="res://scripts/npc/paloma.gd" id="1_b4xfa"]
 [ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_hrg1j"]
 [ext_resource type="Texture2D" uid="uid://dwlelquy1asq7" path="res://assets/Personagens/Paloma/Paloma_pixilart-sprite.png" id="3_52fcy"]
 
