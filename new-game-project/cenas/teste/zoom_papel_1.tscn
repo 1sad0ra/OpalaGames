@@ -1,0 +1,11 @@
+[gd_scene load_steps=0 format=3 uid="uid://d1taxhnvluj4v"]
+
+[node name="zoomPapel1" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 634.0
+offset_bottom = 369.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bn4fdjbhpl08v"]
 
-[ext_resource type="Script" uid="uid://r05eaej0gvuk" path="res://cenas/cenas_npc/area_2d.gd" id="1_1onm1"]
+[ext_resource type="Script" uid="uid://r05eaej0gvuk" path="res://scripts/npc/area_2d.gd" id="1_1onm1"]
 [ext_resource type="Texture2D" uid="uid://bknvelsstx2jb" path="res://assets/Personagens/Rodrigo/new_atlas_texture.tres" id="2_8vu3r"]
 [ext_resource type="Texture2D" uid="uid://cpniq7i3cp11n" path="res://assets/Personagens/Rodrigo/Rodrigo_pixilart-sprite.png" id="3_kahmu"]
 
@@ -19,7 +19,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmdfd"]
@@ -40,7 +40,7 @@ script = ExtResource("1_1onm1")
 sprite_frames = SubResource("SpriteFrames_2811l")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.939938
+frame_progress = 0.99624
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)

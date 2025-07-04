@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvbwhdgq4v6lv"]
+[gd_scene load_steps=10 format=3 uid="uid://dvbwhdgq4v6lv"]
 
 [ext_resource type="Script" uid="uid://bbqco03qp2xj" path="res://scripts/npc/cordenador.gd" id="1_utw41"]
-[ext_resource type="Texture2D" uid="uid://bwvc37bwpip61" path="res://assets/Personagens/Coordenador/Coordenador_pixilart-sprite.png" id="1_y1u0a"]
 [ext_resource type="Texture2D" uid="uid://bwvc37bwpip61" path="res://assets/Personagens/Coordenador/coordenador_pixilart-sprite.png" id="3_obk0a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1u0a"]
-atlas = ExtResource("1_y1u0a")
+atlas = ExtResource("3_obk0a")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxycr"]
@@ -26,8 +25,7 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wadds"]
-size = Vector2(103, 48)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wu1lc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1u0a"]
 bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.470588)
@@ -50,7 +48,7 @@ frame_progress = 0.81943
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 3)
-shape = SubResource("RectangleShape2D_wadds")
+shape = SubResource("CircleShape2D_wu1lc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -96,7 +94,7 @@ stretch_mode = 5
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2, 3)
+position = Vector2(7, 5)
 shape = SubResource("RectangleShape2D_utw41")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

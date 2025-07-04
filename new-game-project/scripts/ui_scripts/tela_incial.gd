@@ -1,5 +1,11 @@
 extends Control
 
+@onready var clickplayer = $clickplayer
+@onready var hoverplayer = $hoverplayer
+
+
+
+
 func _ready():
 	pass
 

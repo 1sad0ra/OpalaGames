@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://7r8mt1ko880h"]
 
-[ext_resource type="Script" uid="uid://dxpaeutcm4re" path="res://cenas/enigmas/ui_papel.gd" id="1_pjep5"]
+[ext_resource type="Script" path="res://cenas/enigmas/ui_papel.gd" id="1_pjep5"]
 [ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_y7qby"]
 
 [node name="ui_papel" type="CanvasLayer"]

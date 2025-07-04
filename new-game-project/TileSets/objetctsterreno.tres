@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ddlga4v7x3uek"]
+
+[ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="1_px2h8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtel4"]
+texture = ExtResource("1_px2h8")
+5:4/size_in_atlas = Vector2i(1, 3)
+5:4/0 = 0
+5:4/0/texture_origin = Vector2i(0, 17)
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.812204, -5.99001, -1.92899, -4.16255, -4.18352, -0.687702, -4.24083, 1.77656, 3.89698, 1.77656, 4.24083, -0.802319, 1.42136, -4.67018, 0.710678, -6.39611, 0.719435, -8, 1.25901, -10.7915, -0.899294, -10.2519)
+7:5/0 = 0
+7:5/0/texture_origin = Vector2i(0, 12)
+8:5/0 = 0
+9:5/0 = 0
+8:6/0 = 0
+7:6/0 = 0
+9:6/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wtel4")

@@ -56,8 +56,8 @@ tile_map_data = PackedByteArray("AAALAAgAAwADAA8AAAALAAkAAwADABAAAAALAAoAAwADABE
 tile_set = ExtResource("1_04pdf")
 
 [node name="porta2" parent="." instance=ExtResource("2_04sss")]
-position = Vector2(541, 48)
+position = Vector2(542, 47)
 destino = "res://cenas/teste/world.tscn"
 
 [node name="player" parent="." instance=ExtResource("3_bxx3x")]
-position = Vector2(492, 109)
+position = Vector2(542, 67)

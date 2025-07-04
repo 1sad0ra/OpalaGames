@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0rdp0t3ry5n2"]
+
+[ext_resource type="TileSet" uid="uid://ddlga4v7x3uek" path="res://TileSets/objetctsterreno.tres" id="1_wtel4"]
+
+[node name="objetctsterreno" type="TileMapLayer"]
+y_sort_enabled = true
+tile_set = ExtResource("1_wtel4")

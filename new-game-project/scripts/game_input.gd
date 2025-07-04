@@ -2,7 +2,6 @@
 
 class_name GameInput
 static  var direction: Vector2
-
 static func movement_input() -> Vector2:
 	if Input.is_action_pressed("esquerda"):
 		direction = Vector2.LEFT
@@ -23,4 +22,6 @@ static func is_movement_input() ->bool:
 	if direction == Vector2.ZERO:
 		return false
 	else:
+		
+		
 		return true

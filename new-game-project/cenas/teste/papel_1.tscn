@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://diy45ay68oa1d"]
+
+[ext_resource type="Script" uid="uid://c6oyk4t31omhf" path="res://papel_1.gd" id="1_om30p"]
+[ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_uiv7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agv6e"]
+atlas = ExtResource("2_uiv7d")
+region = Rect2(176, 171, 16, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nnnvj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agv6e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s8o1"]
+size = Vector2(18, 12)
+
+[node name="papel1" type="Area2D"]
+script = ExtResource("1_om30p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_nnnvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_0s8o1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
