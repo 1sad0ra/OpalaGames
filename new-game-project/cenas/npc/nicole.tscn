@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b52un0hgdstbd"]
 
-[ext_resource type="Script" uid="uid://bffklwnohlhl8" path="res://cenas/cenas_npc/nicole.gd" id="1_opem0"]
+[ext_resource type="Script" uid="uid://bffklwnohlhl8" path="res://scripts/npc/nicole.gd" id="1_opem0"]
 [ext_resource type="Texture2D" uid="uid://dvl7c138ff11m" path="res://assets/Personagens/Nicole/Nicole_pixilart-sprite.png" id="2_iq61d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swxtb"]
