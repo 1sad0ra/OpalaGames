@@ -1,11 +1,24 @@
 extends CanvasLayer
 
 
-# Called when the node enters the scene tree for the first time.
+@onready var imagem: TextureRect = $Imagem
+@onready var texto: Label = $texto
+
+@export var ppaper_texture : Texture2D
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	
+	visible = false 
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func show_paper(texture: Texture2D, text: String):
+	
+	var Imagem = preload("res://assets/Personagens/Paloma/new_atlas_texture.tres")
+
+	visible = true
+	imagem.texture = Imagem
+	texto.text = text
+
+func fechar():
+	visible = false

@@ -1,15 +1,25 @@
 extends Area2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var paper_texture: Texture2D
+@export var paper_text: String
+
+@onready var papel: CanvasLayer = get_parent().get_node("ui_papel")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#signal paper_interacted(texture: Texture2D, text: String)
 
+var player_near = false
 
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+func _on_body_entered(body):
+	if body.name == "Player":
+		player_near = true
+
+func _process(_delta):
+	if player_near and Input.is_action_just_pressed("interact"):
+		papel.show_paper(paper_texture, paper_text)
+		
+	elif player_near and Input.is_action_just_pressed("cancelar"):
+		papel.fechar()
+		
+		#emit_signal("paper_interacted", paper_texture, paper_text)

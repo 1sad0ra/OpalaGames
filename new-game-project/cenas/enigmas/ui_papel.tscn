@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwlmnjwtvwd84"]
+[gd_scene load_steps=3 format=3 uid="uid://cwlmnjwtvwd84"]
 
 [ext_resource type="Script" uid="uid://bnetlvuv1wkd5" path="res://ui_papel.gd" id="1_wk4ve"]
+[ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_pjep5"]
 
 [node name="ui_papel" type="CanvasLayer"]
 script = ExtResource("1_wk4ve")
+ppaper_texture = ExtResource("2_pjep5")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 640.0
