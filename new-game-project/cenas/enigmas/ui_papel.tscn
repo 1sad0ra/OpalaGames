@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://7r8mt1ko880h"]
+
+[ext_resource type="Script" uid="uid://dxpaeutcm4re" path="res://cenas/enigmas/ui_papel.gd" id="1_pjep5"]
+[ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_y7qby"]
+
+[node name="ui_papel" type="CanvasLayer"]
+script = ExtResource("1_pjep5")
+ppaper_texture = ExtResource("2_y7qby")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Imagem" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.357812
+anchor_top = 0.2875
+anchor_right = 0.642187
+anchor_bottom = 0.7125
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 4
+
+[node name="Texto" type="Label" parent="."]
+offset_left = 243.0
+offset_top = 50.0
+offset_right = 467.0
+offset_bottom = 99.0
+text = "ola meu chapa, va ate o lab 7
+"
