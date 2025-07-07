@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=4 uid="uid://dgoy1fogkmv36"]
+[gd_scene load_steps=13 format=4 uid="uid://dgoy1fogkmv36"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="2_ehqlt"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_otrou"]
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_favmu"]
 [ext_resource type="PackedScene" uid="uid://bnsql2jdjgxs" path="res://cenas/teste/objetos_terreno.tscn" id="5_jt30a"]
+[ext_resource type="PackedScene" uid="uid://dvbwhdgq4v6lv" path="res://cenas/npc/cordenador.tscn" id="6_n5us6"]
+[ext_resource type="PackedScene" uid="uid://bn4fdjbhpl08v" path="res://cenas/npc/rodrigo.tscn" id="7_da05w"]
+[ext_resource type="PackedScene" uid="uid://dqj6oif0vamqc" path="res://cenas/npc/jenne.tscn" id="8_hqdn5"]
+[ext_resource type="PackedScene" uid="uid://b52un0hgdstbd" path="res://cenas/npc/nicole.tscn" id="9_1ubxq"]
+[ext_resource type="PackedScene" uid="uid://dy0fvin8fma8x" path="res://cenas/npc/paloma.tscn" id="10_mt8um"]
+[ext_resource type="PackedScene" uid="uid://bao6mpt78i3xq" path="res://cenas/npc/willames.tscn" id="11_ts74w"]
+[ext_resource type="PackedScene" uid="uid://3jgt87ej63vx" path="res://cenas/npc/isadora.tscn" id="12_1ubxq"]
 
 [node name="world" type="Node2D"]
 
@@ -64,3 +71,24 @@ position = Vector2(203, 445)
 [node name="objetosTerreno" parent="Ysort" instance=ExtResource("5_jt30a")]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAMABsAAAAFAAQAAAApAAgAAAAFAAQAAAAqABsAAAAFAAQAAAAJABsAAAAFAAQAAAAKAAgAAAAFAAQAAAASAA0AAAAFAAQAAAASABQAAAAFAAQAAAAhABQAAAAFAAQAAAAhAA0AAAAFAAQAAAA=")
+
+[node name="Cordenador" parent="." instance=ExtResource("6_n5us6")]
+position = Vector2(977, 478)
+
+[node name="rodrigo" parent="." instance=ExtResource("7_da05w")]
+position = Vector2(537, 82)
+
+[node name="jenne" parent="." instance=ExtResource("8_hqdn5")]
+position = Vector2(245, 516)
+
+[node name="nicole" parent="." instance=ExtResource("9_1ubxq")]
+position = Vector2(-31, 511)
+
+[node name="Paloma" parent="." instance=ExtResource("10_mt8um")]
+position = Vector2(99, 83)
+
+[node name="willames" parent="." instance=ExtResource("11_ts74w")]
+position = Vector2(710, 561)
+
+[node name="isadora" parent="." instance=ExtResource("12_1ubxq")]
+position = Vector2(766, 227)

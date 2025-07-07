@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
+@onready var label_interaçao = $LabelInteraçao
+
 @onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
-@onready var label_interaçao: Label = $CanvasLayer/LabelInteraçao
 @onready var nomelabel: Label = $CanvasLayer/Nomelabel
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
 
@@ -37,14 +38,14 @@ func _process(_delta):
 func _on_area_2d_body_entered(body) -> void:
 	if body.name == "player":
 		player_perto = true
-		label_interaçao.text = "Pressione E para interagir"
+		label_interaçao.text = " E "
 		label_interaçao.visible = true
-		label_interaçao.global_position = global_position + Vector2(0, -40)
+		label_interaçao.position = Vector2(-label_interaçao.size.x/2, -40)
 	
 func _on_area_2d_body_exited(body) -> void:
 	if body.name == "player":
 		player_perto = false
-		label_interaçao.text = "Pressione E para interagir"
+		label_interaçao.text = " E "
 		label_interaçao.visible = false
 		
 
@@ -53,7 +54,12 @@ func iniciar_dialogo():
 	label_interaçao.visible = false
 	caixa_dialogo.visible = true
 	texto_dialogo.visible = true
+	retrato.visible = true
+	nomelabel.visible = true
 	fala_index = 0
+	
+	GameState.player_pode_mover = false
+	
 	proxima_fala()
 
 func proxima_fala():
@@ -73,7 +79,7 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.00).timeout
 	pode_avancar = true
 
 func encerrar_dialogo():
@@ -83,3 +89,6 @@ func encerrar_dialogo():
 	caixa_dialogo.visible = false
 	nomelabel.visible = false
 	retrato.visible = false
+	fala_index = 0
+	
+	GameState.player_pode_mover = true

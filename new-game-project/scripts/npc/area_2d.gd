@@ -1,9 +1,10 @@
-extends Area2D
+extends CharacterBody2D
+
+@onready var label_interacao = $LabelInteracao
 
 # os elemetos visuais do dialogo no canvaslayer
 @onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
-@onready var label_interacao: Label = $CanvasLayer/LabelInteracao
 @onready var nomelabel: Label = $CanvasLayer/nomelabel
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
 
@@ -16,7 +17,7 @@ var fala_index = 0
 # listas de falas com dicionario indicando personagem e o texto
 var falas = [
 	{"speaker": "Rodrigo", "text": "E aí, cara. Você é novo aqui, certo?"},
-	{"speaker": "Rodrigo", "text": "Deve ser você. Vou logo te avisar: por algum motivo, toda a antiga direção foi trocada — com exceção do coordenador."},
+	{"speaker": "Rodrigo", "text": "Deve ser você. Vou logo te avisar: por algum motivo, toda a antiga direção foi trocada com exceção do coordenador."},
 	{"speaker": "Rodrigo", "text": "Ele deve ser concursado. Bom, não sei exatamente o motivo, mas vou quebrar esse galho pra você e descobrir."},
 	{"speaker": "Player", "text": "Mas... e a aula?"},
 	{"speaker": "Rodrigo", "text": "O mistério é mais importante. Coloca presença pra mim, beleza?"},
@@ -43,18 +44,18 @@ func _process(_delta):
 		proxima_fala()
 		
 # Quando o player entra na área de interação
-func _on_body_entered(body) -> void:
+func _on_area_2d_body_entered(body) -> void:
 	if body.name == "player":
 		player_perto = true
-		label_interacao.text = "Pressione E para interagir"
+		label_interacao.text = " E "
 		label_interacao.visible = true
-		label_interacao.global_position = global_position + Vector2(0, -40)
+		label_interacao.position = Vector2(-label_interacao.size.x/2, -40)
 
 # Quando o player sai da área, esconde a mensagem de interação
-func _on_body_exited(body) -> void:
+func _on_area_2d_body_exited(body) -> void:
 	if body.name == "player":
 		player_perto = false
-		label_interacao.text = "Pressione E para interagir"
+		label_interacao.text = " E "
 		label_interacao.visible = false
 	
 func iniciar_dialogo():
@@ -62,7 +63,12 @@ func iniciar_dialogo():
 	label_interacao.visible = false
 	caixa_dialogo.visible = true
 	texto_dialogo.visible = true
+	nomelabel.visible = true
+	retrato.visible = true
 	fala_index = 0
+	
+	GameState.player_pode_mover = false
+	
 	proxima_fala()
 
 func proxima_fala():
@@ -81,7 +87,7 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.00).timeout
 	pode_avancar = true
 
 # Finaliza o diálogo e esconde os elementos
@@ -92,3 +98,6 @@ func encerrar_dialogo():
 	caixa_dialogo.visible = false
 	nomelabel.visible = false
 	retrato.visible = false
+	fala_index = 0
+	
+	GameState.player_pode_mover = true

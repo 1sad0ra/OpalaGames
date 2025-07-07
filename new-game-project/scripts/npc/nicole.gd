@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+@onready var label_interacao  = $LabelInteracao
+
+
 @onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
 @onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
-@onready var label_interacao: Label = $CanvasLayer/LabelInteracao
 @onready var nomelabel: Label = $CanvasLayer/nomelabel
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
 
@@ -21,7 +23,7 @@ var falas = [
 ]
 
 var retratos= {
-	"Nicole": preload("res://assets/Personagens/Nicole/Nicole_pixilart-sprite.png"),
+	"Nicole": preload("res://assets/Personagens/Nicole/new_atlas_texture.tres"),
 	"Player": preload("res://assets/Personagens/Player_Socram/new_atlas_texture.tres")
 }
 
@@ -39,14 +41,14 @@ func _process(_delta):
 func _on_area_2d_body_entered(body) -> void:
 	if body.name == "player":
 		player_perto = true
-		label_interacao.text = "Pressione E para interagir"
+		label_interacao.text = " E "
 		label_interacao.visible = true
-		label_interacao.global_position = global_position + Vector2(0, -40)
+		label_interacao.position = Vector2(-label_interacao.size.x/2, -40)
 	
 func _on_area_2d_body_exited(body) -> void:
 	if body.name == "player":
 		player_perto = false
-		label_interacao.text = "Pressione E para interagir"
+		label_interacao.text = " E "
 		label_interacao.visible = false
 
 func iniciar_dialogo():
@@ -54,7 +56,11 @@ func iniciar_dialogo():
 	label_interacao.visible = false
 	caixa_dialogo.visible = true
 	texto_dialogo.visible = true
+	retrato.visible = true
+	nomelabel.visible = true
 	fala_index = 0
+	
+	GameState.player_pode_mover = false
 	proxima_fala()
 
 func proxima_fala():
@@ -74,7 +80,7 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.00).timeout
 	pode_avancar = true
 
 func encerrar_dialogo():
@@ -84,3 +90,7 @@ func encerrar_dialogo():
 	caixa_dialogo.visible = false
 	nomelabel.visible = false
 	retrato.visible = false
+	fala_index = 0
+	
+	GameState.player_pode_mover = true
+	

@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bao6mpt78i3xq"]
+[gd_scene load_steps=10 format=3 uid="uid://bao6mpt78i3xq"]
 
-[ext_resource type="Script" uid="uid://bnp4xnv7b18kj" path="res://cenas/cenas_npc/willames.gd" id="1_d7wen"]
+[ext_resource type="Script" uid="uid://bnp4xnv7b18kj" path="res://scripts/npc/willames.gd" id="1_d7wen"]
 [ext_resource type="Texture2D" uid="uid://4m8t05lh3wq3" path="res://assets/Personagens/Willames/Willames_pixilart-sprite.png" id="2_f876p"]
 [ext_resource type="Texture2D" uid="uid://c35fej0lrihna" path="res://assets/Personagens/Willames/new_atlas_texture.tres" id="3_mxdmd"]
 
@@ -22,8 +22,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wuyh"]
-size = Vector2(93, 70)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12igr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4n25"]
 bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.470588)
@@ -32,7 +31,10 @@ bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.470588)
 shadow_size = 7
 shadow_color = Color(0, 0, 0, 1)
 
-[node name="willames" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njy0a"]
+size = Vector2(118, 62)
+
+[node name="willames" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_d7wen")
 
@@ -43,47 +45,55 @@ frame_progress = 0.479094
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 3)
-shape = SubResource("RectangleShape2D_4wuyh")
+shape = SubResource("CapsuleShape2D_12igr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CaixaDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 80.0
-offset_top = 250.0
-offset_right = 580.0
-offset_bottom = 320.0
+offset_left = 65.0
+offset_top = 228.0
+offset_right = 585.0
+offset_bottom = 324.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_a4n25")
 autowrap_mode = 2
 
 [node name="TextoDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 162.0
-offset_top = 271.0
-offset_right = 572.0
-offset_bottom = 315.0
+offset_left = 147.0
+offset_top = 254.0
+offset_right = 581.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 14
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 
-[node name="LabelInteracao" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
-label_settings = SubResource("LabelSettings_h762v")
-
 [node name="nomelabel" type="Label" parent="CanvasLayer"]
-offset_left = 480.0
-offset_top = 250.0
-offset_right = 577.0
-offset_bottom = 273.0
-horizontal_alignment = 2
-vertical_alignment = 1
+offset_left = 147.0
+offset_top = 231.0
+offset_right = 245.0
+offset_bottom = 254.0
 
 [node name="Retrato" type="TextureRect" parent="CanvasLayer"]
-offset_left = 88.0
-offset_top = 256.0
-offset_right = 148.0
-offset_bottom = 315.0
+offset_left = 73.0
+offset_top = 248.0
+offset_right = 133.0
+offset_bottom = 307.0
 stretch_mode = 5
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[node name="LabelInteracao" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -48.0
+offset_right = 22.0
+offset_bottom = -25.0
+label_settings = SubResource("LabelSettings_h762v")
+horizontal_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_njy0a")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

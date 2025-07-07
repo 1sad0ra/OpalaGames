@@ -4,6 +4,8 @@ class_name GameInput
 static  var direction: Vector2
 
 static func movement_input() -> Vector2:
+	if not GameState.player_pode_mover:
+		return Vector2.ZERO
 	if Input.is_action_pressed("esquerda"):
 		direction = Vector2.LEFT
 	elif Input.is_action_pressed("direita"):

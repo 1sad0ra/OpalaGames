@@ -1,7 +1,7 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dfpnqd703tfs4"]
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dskrgf0rbjgw2"]
 
-[ext_resource type="Texture2D" uid="uid://p8x4o8h7pswx" path="res://assets/Personagens/Coordenador/Coordenador_pixilart-sprite.png" id="1_22308"]
+[ext_resource type="Texture2D" uid="uid://bwvc37bwpip61" path="res://assets/Personagens/Coordenador/coordenador_pixilart-sprite.png" id="1_22308"]
 
 [resource]
 atlas = ExtResource("1_22308")
-region = Rect2(256, 0, 32, 32)
+region = Rect2(32, 0, 32, 32)
