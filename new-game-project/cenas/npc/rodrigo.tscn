@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn4fdjbhpl08v"]
+[gd_scene load_steps=11 format=3 uid="uid://bn4fdjbhpl08v"]
 
-[ext_resource type="Script" uid="uid://r05eaej0gvuk" path="res://cenas/cenas_npc/area_2d.gd" id="1_1onm1"]
+[ext_resource type="Script" uid="uid://r05eaej0gvuk" path="res://scripts/npc/area_2d.gd" id="1_1onm1"]
 [ext_resource type="Texture2D" uid="uid://bknvelsstx2jb" path="res://assets/Personagens/Rodrigo/new_atlas_texture.tres" id="2_8vu3r"]
 [ext_resource type="Texture2D" uid="uid://cpniq7i3cp11n" path="res://assets/Personagens/Rodrigo/Rodrigo_pixilart-sprite.png" id="3_kahmu"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_x36p7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8iwb"]
 atlas = ExtResource("3_kahmu")
@@ -22,17 +23,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmdfd"]
-size = Vector2(106, 66)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x36p7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n62ee"]
 bg_color = Color(0.00784314, 0.00784314, 0.00784314, 0.470588)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8sug0"]
+font = ExtResource("4_x36p7")
 shadow_size = 7
 shadow_color = Color(0, 0, 0, 1)
 
-[node name="rodrigo" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x36p7"]
+size = Vector2(115, 69)
+
+[node name="rodrigo" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_1onm1")
 
@@ -44,50 +48,55 @@ frame_progress = 0.939938
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
-shape = SubResource("RectangleShape2D_pmdfd")
+shape = SubResource("CapsuleShape2D_x36p7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CaixaDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 80.0
-offset_top = 250.0
-offset_right = 580.0
-offset_bottom = 320.0
+offset_left = 65.0
+offset_top = 228.0
+offset_right = 585.0
+offset_bottom = 324.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_n62ee")
 autowrap_mode = 2
 
 [node name="TextoDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 162.0
-offset_top = 271.0
-offset_right = 572.0
-offset_bottom = 315.0
-theme_override_font_sizes/font_size = 20
+offset_left = 147.0
+offset_top = 254.0
+offset_right = 581.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 14
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 
-[node name="LabelInteracao" type="Label" parent="CanvasLayer"]
+[node name="nomelabel" type="Label" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 231.0
+offset_right = 245.0
+offset_bottom = 254.0
+
+[node name="Retrato" type="TextureRect" parent="CanvasLayer"]
+offset_left = 73.0
+offset_top = 248.0
+offset_right = 133.0
+offset_bottom = 307.0
+stretch_mode = 5
+
+[node name="LabelInteracao" type="Label" parent="."]
 offset_left = -33.0
 offset_top = -55.0
 offset_right = 35.0
 offset_bottom = -27.0
 label_settings = SubResource("LabelSettings_8sug0")
+horizontal_alignment = 1
 
-[node name="nomelabel" type="Label" parent="CanvasLayer"]
-offset_left = 480.0
-offset_top = 250.0
-offset_right = 577.0
-offset_bottom = 273.0
-horizontal_alignment = 2
-vertical_alignment = 1
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="Retrato" type="TextureRect" parent="CanvasLayer"]
-offset_left = 88.0
-offset_top = 256.0
-offset_right = 148.0
-offset_bottom = 315.0
-stretch_mode = 5
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_x36p7")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

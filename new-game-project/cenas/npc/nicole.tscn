@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b52un0hgdstbd"]
+[gd_scene load_steps=11 format=3 uid="uid://b52un0hgdstbd"]
 
-[ext_resource type="Script" uid="uid://bffklwnohlhl8" path="res://cenas/cenas_npc/nicole.gd" id="1_opem0"]
+[ext_resource type="Script" uid="uid://bffklwnohlhl8" path="res://scripts/npc/nicole.gd" id="1_opem0"]
 [ext_resource type="Texture2D" uid="uid://dvl7c138ff11m" path="res://assets/Personagens/Nicole/Nicole_pixilart-sprite.png" id="2_iq61d"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_b1oe4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swxtb"]
 atlas = ExtResource("2_iq61d")
@@ -25,8 +26,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm2e4"]
-size = Vector2(20, 23)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1oe4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7xq"]
 size = Vector2(104, 59)
@@ -35,6 +35,7 @@ size = Vector2(104, 59)
 bg_color = Color(0.00392157, 0.00392157, 0.00392157, 0.470588)
 
 [sub_resource type="LabelSettings" id="LabelSettings_mdru6"]
+font = ExtResource("3_b1oe4")
 shadow_size = 7
 shadow_color = Color(0, 0, 0, 1)
 
@@ -49,7 +50,7 @@ frame_progress = 0.912839
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_cm2e4")
+shape = SubResource("CapsuleShape2D_b1oe4")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -60,44 +61,45 @@ shape = SubResource("RectangleShape2D_7k7xq")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CaixaDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 80.0
-offset_top = 250.0
-offset_right = 580.0
-offset_bottom = 320.0
+offset_left = 65.0
+offset_top = 228.0
+offset_right = 585.0
+offset_bottom = 324.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_n03lv")
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TextoDialogo" type="Label" parent="CanvasLayer"]
-offset_left = 162.0
-offset_top = 271.0
-offset_right = 572.0
-offset_bottom = 315.0
-theme_override_font_sizes/font_size = 20
+offset_left = 147.0
+offset_top = 254.0
+offset_right = 581.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 14
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 
-[node name="LabelInteracao" type="Label" parent="CanvasLayer"]
+[node name="nomelabel" type="Label" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 231.0
+offset_right = 245.0
+offset_bottom = 254.0
+
+[node name="Retrato" type="TextureRect" parent="CanvasLayer"]
+offset_left = 73.0
+offset_top = 248.0
+offset_right = 133.0
+offset_bottom = 307.0
+stretch_mode = 5
+
+[node name="LabelInteracao" type="Label" parent="."]
 offset_left = -25.0
 offset_top = -48.0
 offset_right = 31.0
 offset_bottom = -22.0
 label_settings = SubResource("LabelSettings_mdru6")
-
-[node name="nomelabel" type="Label" parent="CanvasLayer"]
-offset_left = 480.0
-offset_top = 250.0
-offset_right = 577.0
-offset_bottom = 273.0
-
-[node name="Retrato" type="TextureRect" parent="CanvasLayer"]
-offset_left = 87.0
-offset_top = 256.0
-offset_right = 147.0
-offset_bottom = 315.0
-stretch_mode = 5
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

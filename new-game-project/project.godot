@@ -15,6 +15,10 @@ run/main_scene="uid://dll8nx3bt3avy"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://scripts/GameState.gd"
+
 [display]
 
 window/size/viewport_width=640
