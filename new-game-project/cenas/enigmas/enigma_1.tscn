@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://be6ui16d1pi1k"]
+
+[ext_resource type="Script" uid="uid://v0llbgqyagqs" path="res://cenas/enigmas/enigma_1.gd" id="1_iiwa1"]
+[ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_6fe17"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6fe17"]
+radius = 15.2971
+
+[node name="enigma1" type="Area2D"]
+script = ExtResource("1_iiwa1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_6fe17")
+region_enabled = true
+region_rect = Rect2(177.426, 176.876, 14.7674, 14.5828)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6fe17")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
