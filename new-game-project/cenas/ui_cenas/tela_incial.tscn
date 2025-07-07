@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dll8nx3bt3avy"]
+[gd_scene load_steps=12 format=3 uid="uid://dll8nx3bt3avy"]
 
 [ext_resource type="Texture2D" uid="uid://b28swfbq14xi3" path="res://assets/Mapa/esbocosemcamadas (2).png" id="1_gka14"]
 [ext_resource type="Script" uid="uid://diwbswfpf7hut" path="res://scripts/ui_scripts/tela_incial.gd" id="1_rikrs"]
+[ext_resource type="AudioStream" uid="uid://c00f3aynuhcuo" path="res://sounds/click-21156.wav" id="2_5jcpw"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="2_rikrs"]
+[ext_resource type="AudioStream" uid="uid://v84oetfns8fu" path="res://sounds/ui-sounds-pack-3-7-359721.mp3" id="3_1ithu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmdr4"]
 bg_color = Color(1, 1, 1, 0.784314)
@@ -88,6 +90,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rikrs")
 
+[node name="ClickPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5jcpw")
+volume_db = 24.0
+
+[node name="HoverPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1ithu")
+
 [node name="bg" type="TextureRect" parent="."]
 modulate = Color(0.458824, 0.458824, 0.458824, 0)
 layout_mode = 2
@@ -141,7 +150,7 @@ theme_override_fonts/font = ExtResource("2_rikrs")
 theme_override_font_sizes/font_size = 20
 text = "A jornada de um professor"
 
-[node name="jogar_Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="jogar_Button1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -155,7 +164,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gka14")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rikrs")
 text = "Jogar"
 
-[node name="Sair_Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Sair_Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
