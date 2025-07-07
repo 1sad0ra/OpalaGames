@@ -44,6 +44,10 @@ folder_colors={
 "res://sounds/": "green"
 }
 
+[global_group]
+
+menu_buttons=""
+
 [input]
 
 ui_accept={
