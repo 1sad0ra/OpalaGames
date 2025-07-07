@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://kqjvdlw2m74d"]
+[gd_scene load_steps=7 format=4 uid="uid://kqjvdlw2m74d"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_jx82w"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="2_7qx2m"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_b0oyg"]
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_o085d"]
+[ext_resource type="PackedScene" uid="uid://be6ui16d1pi1k" path="res://cenas/enigmas/enigma_1.tscn" id="5_aicvf"]
+[ext_resource type="PackedScene" uid="uid://c2jeogadomjoo" path="res://cenas/enigmas/ui_papel.tscn" id="6_tfqeb"]
 
 [node name="salaTutorial" type="Node2D"]
 
@@ -81,7 +83,15 @@ position = Vector2(541, 48)
 destino = "res://cenas/teste/world.tscn"
 
 [node name="player" parent="." instance=ExtResource("2_7qx2m")]
-position = Vector2(492, 109)
+position = Vector2(540, 60)
 
 [node name="pause_menu" parent="." instance=ExtResource("4_o085d")]
 visible = false
+
+[node name="fase1" type="Node2D" parent="."]
+
+[node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
+visible = false
+
+[node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
+position = Vector2(460, 100)
