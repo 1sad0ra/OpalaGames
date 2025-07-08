@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uskjgeal8l48"
-path="res://.godot/imported/quadro.png-fdadd771eab3a5b94bb96ddd4a9e0364.ctex"
+uid="uid://nc0mxne4stmf"
+path="res://.godot/imported/quadrobranco.png-a2b86c9db2952750a702ac15ffae3be6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cenas/enigmas/imagens/quadro.png"
-dest_files=["res://.godot/imported/quadro.png-fdadd771eab3a5b94bb96ddd4a9e0364.ctex"]
+source_file="res://cenas/enigmas/imagens/quadrobranco.png"
+dest_files=["res://.godot/imported/quadrobranco.png-a2b86c9db2952750a702ac15ffae3be6.ctex"]
 
 [params]
 
