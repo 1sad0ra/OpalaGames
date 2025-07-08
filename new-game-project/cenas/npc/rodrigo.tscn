@@ -53,6 +53,7 @@ shape = SubResource("CapsuleShape2D_x36p7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CaixaDialogo" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 65.0
 offset_top = 228.0
 offset_right = 585.0

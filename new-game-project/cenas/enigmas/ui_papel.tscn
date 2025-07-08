@@ -1,23 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2jeogadomjoo"]
+[gd_scene load_steps=4 format=3 uid="uid://c2jeogadomjoo"]
 
 [ext_resource type="Script" uid="uid://bw3equs7yjro1" path="res://cenas/enigmas/ui_papel.gd" id="1_pjep5"]
 [ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_pjep5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pjep5"]
 
 [node name="ui_papel" type="CanvasLayer"]
 script = ExtResource("1_pjep5")
 paper_texture = ExtResource("2_pjep5")
 
 [node name="Panel" type="Panel" parent="."]
+offset_top = -2.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 38.0
 scale = Vector2(16, 9.05556)
 
 [node name="Imagem" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 288.0
-offset_top = 136.0
-offset_right = 402.0
-offset_bottom = 255.0
+offset_left = 220.0
+offset_top = 87.0
+offset_right = 384.0
+offset_bottom = 244.0
+texture = SubResource("CanvasTexture_pjep5")
 stretch_mode = 4
 
 [node name="Texto" type="Label" parent="."]
