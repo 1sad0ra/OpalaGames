@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://do43ctveiyn4a"]
 
-[ext_resource type="Script" uid="uid://dif1i6341j6yw" path="res://livro_tutorial.gd" id="1_eqwld"]
+[ext_resource type="Script" uid="uid://dif1i6341j6yw" path="res://cenas/interações/livro_tutorial.gd" id="1_eqwld"]
 [ext_resource type="Texture2D" uid="uid://b2bqbai2oteo5" path="res://assets/Mapa/opalalivro/oplalalivro.png" id="2_n5goa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o4k7l"]

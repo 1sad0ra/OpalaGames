@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://bbohk67gdggsl"]
 
 [ext_resource type="Texture2D" uid="uid://cdvjqrg0piac5" path="res://assets/Mapa/animaçao-porta1.png" id="1_qe45y"]
-[ext_resource type="Script" uid="uid://dgpfv445wkoaf" path="res://cenas/teste/porta.gd" id="1_rlmal"]
+[ext_resource type="Script" uid="uid://dgpfv445wkoaf" path="res://scripts/porta.gd" id="1_rlmal"]
 [ext_resource type="Texture2D" uid="uid://ce44r3f5ju34t" path="res://assets/Mapa/animaçao-porta2.png" id="2_rlmal"]
 [ext_resource type="Texture2D" uid="uid://dvhxk5vhd2ucs" path="res://assets/Mapa/animaçao-porta3.png" id="3_u5vwi"]
 [ext_resource type="Texture2D" uid="uid://cuv0qr0mfxmq0" path="res://assets/Mapa/animaçao-porta4.png" id="4_yx5in"]

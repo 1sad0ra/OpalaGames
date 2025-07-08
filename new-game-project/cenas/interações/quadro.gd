@@ -8,7 +8,7 @@ var player_perto = false
 
 func _ready() -> void:
 	fechar()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		player_perto = true

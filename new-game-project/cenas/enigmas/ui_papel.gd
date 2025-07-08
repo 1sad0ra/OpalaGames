@@ -6,7 +6,6 @@ extends CanvasLayer
 @export var paper_texture : Texture2D
 
 func _ready() -> void:
-	print("visivel")
 	visible = false 
 
 func show_paper(texture: Texture2D, text: String):
