@@ -73,22 +73,22 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAMABsAAAAFAAQAAAApAAgAAAAFAAQAAAAqABsAAAAFAAQAAAAJABsAAAAFAAQAAAAKAAgAAAAFAAQAAAASAA0AAAAFAAQAAAASABQAAAAFAAQAAAAhABQAAAAFAAQAAAAhAA0AAAAFAAQAAAA=")
 
 [node name="Cordenador" parent="." instance=ExtResource("6_n5us6")]
-position = Vector2(977, 478)
+position = Vector2(83, 125)
 
 [node name="rodrigo" parent="." instance=ExtResource("7_da05w")]
-position = Vector2(537, 82)
+position = Vector2(413, -7)
 
 [node name="jenne" parent="." instance=ExtResource("8_hqdn5")]
-position = Vector2(245, 516)
+position = Vector2(748, 58)
 
 [node name="nicole" parent="." instance=ExtResource("9_1ubxq")]
-position = Vector2(-31, 511)
+position = Vector2(160, 492)
 
 [node name="Paloma" parent="." instance=ExtResource("10_mt8um")]
-position = Vector2(99, 83)
+position = Vector2(752, 373)
 
 [node name="willames" parent="." instance=ExtResource("11_ts74w")]
-position = Vector2(710, 561)
+position = Vector2(696, 548)
 
 [node name="isadora" parent="." instance=ExtResource("12_1ubxq")]
-position = Vector2(766, 227)
+position = Vector2(-84, 456)
