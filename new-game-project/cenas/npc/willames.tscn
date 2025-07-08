@@ -1,48 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://bao6mpt78i3xq"]
+[gd_scene load_steps=10 format=3 uid="uid://bao6mpt78i3xq"]
 
 [ext_resource type="Script" uid="uid://bnp4xnv7b18kj" path="res://scripts/npc/willames.gd" id="1_d7wen"]
 [ext_resource type="Texture2D" uid="uid://4m8t05lh3wq3" path="res://assets/Personagens/Willames/Willames_pixilart-sprite.png" id="2_f876p"]
 [ext_resource type="Texture2D" uid="uid://c35fej0lrihna" path="res://assets/Personagens/Willames/new_atlas_texture.tres" id="3_mxdmd"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_12igr"]
-atlas = ExtResource("2_f876p")
-region = Rect2(448, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_njy0a"]
-atlas = ExtResource("2_f876p")
-region = Rect2(480, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_01v6n"]
-atlas = ExtResource("2_f876p")
-region = Rect2(512, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2ytv"]
-atlas = ExtResource("2_f876p")
-region = Rect2(544, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7rdjs"]
-atlas = ExtResource("2_f876p")
-region = Rect2(576, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sd56j"]
-atlas = ExtResource("2_f876p")
-region = Rect2(416, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkdg1"]
-atlas = ExtResource("2_f876p")
-region = Rect2(384, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdrbf"]
-atlas = ExtResource("2_f876p")
-region = Rect2(352, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cavfo"]
-atlas = ExtResource("2_f876p")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vejb"]
-atlas = ExtResource("2_f876p")
-region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7p38"]
 atlas = ExtResource("2_f876p")
@@ -52,53 +12,13 @@ region = Rect2(0, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_12igr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_njy0a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_01v6n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w2ytv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7rdjs")
-}],
-"loop": true,
-"name": &"andar_direita",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sd56j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qkdg1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdrbf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cavfo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7vejb")
-}],
-"loop": true,
-"name": &"andar_esquerda",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_r7p38")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_mxdmd")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -120,9 +40,8 @@ script = ExtResource("1_d7wen")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_emstt")
-animation = &"andar_esquerda"
-autoplay = "idle"
-frame_progress = 0.180706
+autoplay = "default"
+frame_progress = 0.479094
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 3)
