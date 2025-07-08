@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
+@onready var som_fala: AudioStreamPlayer2D = $SomFala
+
 
 var player_perto = false
 var falando = false
@@ -75,8 +77,11 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.00).timeout
+		if letra != " ":
+			som_fala.play()
+		await get_tree().create_timer(0.02).timeout
 	pode_avancar = true
+
 
 func encerrar_dialogo():
 	falando = false
