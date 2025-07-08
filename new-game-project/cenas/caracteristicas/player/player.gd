@@ -8,15 +8,6 @@ var last_direction := Vector2.DOWN  # Última direção pressionada
 @onready var passos = $passos  # Som de passos
 
 func _physics_process(delta):
-	if not GameState.player_pode_mover:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		anim.animation = "idle_down"
-		anim.play()
-		if passos.playing:
-			passos.stop()
-		return
-		
 	direction = Vector2.ZERO
 
 	if Input.is_action_pressed("ui_up"):
