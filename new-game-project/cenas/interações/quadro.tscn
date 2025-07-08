@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bg4mahjbkxhol"]
 
-[ext_resource type="Script" uid="uid://d0t2u3au2ctli" path="res://quadro.gd" id="1_gql2h"]
+[ext_resource type="Script" uid="uid://d0t2u3au2ctli" path="res://cenas/interações/quadro.gd" id="1_gql2h"]
 [ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_ah07o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7l76"]

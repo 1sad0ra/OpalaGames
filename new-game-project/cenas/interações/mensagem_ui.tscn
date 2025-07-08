@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp6sxjp2ti46e"]
+
+[ext_resource type="Script" uid="uid://l4koawy0vlvm" path="res://cenas/interações/mensagem_ui.gd" id="1_ppce1"]
+
+[node name="mensagemUI" type="CanvasLayer"]
+script = ExtResource("1_ppce1")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 639.0
+offset_bottom = 359.0
+
+[node name="mensagem" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 155.0
+offset_right = 387.0
+offset_bottom = 204.0
+text = "desvende os enigmas e abra o cofre"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="tempo_mensagem" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="tempo_mensagem" to="." method="_on_tempo_mensagem_timeout"]

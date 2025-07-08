@@ -3,9 +3,9 @@
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_04pdf"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="2_04sss"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="3_bxx3x"]
-[ext_resource type="PackedScene" uid="uid://do43ctveiyn4a" path="res://cenas/enigmas/livro_tutorial.tscn" id="4_bxx3x"]
-[ext_resource type="PackedScene" uid="uid://d3dhx312ggg4d" path="res://cenas/enigmas/conteudo.tscn" id="5_xibja"]
-[ext_resource type="PackedScene" uid="uid://bg4mahjbkxhol" path="res://cenas/enigmas/quadro.tscn" id="6_xibja"]
+[ext_resource type="PackedScene" uid="uid://do43ctveiyn4a" path="res://cenas/interações/livro_tutorial.tscn" id="4_bxx3x"]
+[ext_resource type="PackedScene" uid="uid://d3dhx312ggg4d" path="res://cenas/interações/conteudo.tscn" id="5_xibja"]
+[ext_resource type="PackedScene" uid="uid://bg4mahjbkxhol" path="res://cenas/interações/quadro.tscn" id="6_xibja"]
 
 [node name="salaTutorial" type="Node2D"]
 rotation = -0.00435567

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3dhx312ggg4d"]
 
-[ext_resource type="Script" uid="uid://ba3kd8hcbqgax" path="res://conteudo.gd" id="1_td8jt"]
+[ext_resource type="Script" uid="uid://ba3kd8hcbqgax" path="res://cenas/interações/conteudo.gd" id="1_td8jt"]
 [ext_resource type="Texture2D" uid="uid://b4khqq7ao8esn" path="res://assets/Mapa/opalalivro/pixil-frame-0.png" id="2_qx3he"]
 
 [node name="conteudo" type="CanvasLayer"]
