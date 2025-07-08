@@ -5,12 +5,14 @@ extends CharacterBody2D
 @onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
+
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 # Movimento
 @export var velocidade: float = 40.0
 @export var distancia_maxima: float = 120.0
 @export var direcao: Vector2 = Vector2.DOWN  # Começa andando para baixo
+
 
 # Estados
 var posicao_inicial
@@ -107,8 +109,11 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.00).timeout
+		if letra != " ":
+			som_fala.play()
+		await get_tree().create_timer(0.02).timeout
 	pode_avancar = true
+
 
 func encerrar_dialogo():
 	falando = false
