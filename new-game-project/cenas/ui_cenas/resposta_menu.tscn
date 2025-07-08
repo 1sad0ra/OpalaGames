@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6swet5ftgsvp"]
 
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="1_66avy"]
-[ext_resource type="Script" path="res://scripts/ui_scripts/resposta_menu.gd" id="1_bmj24"]
+[ext_resource type="Script" uid="uid://8fgrhsxwtple" path="res://scripts/ui_scripts/resposta_menu.gd" id="1_bmj24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66avy"]
 bg_color = Color(1, 1, 1, 1)
