@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg4mahjbkxhol"]
+[gd_scene load_steps=6 format=3 uid="uid://bg4mahjbkxhol"]
 
 [ext_resource type="Script" uid="uid://d0t2u3au2ctli" path="res://cenas/interações/quadro.gd" id="1_gql2h"]
 [ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_ah07o"]
+[ext_resource type="Texture2D" uid="uid://nc0mxne4stmf" path="res://cenas/enigmas/imagens/quadrobranco.png" id="3_piomu"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_5elrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7l76"]
 size = Vector2(58, 31.5)
@@ -27,17 +29,23 @@ offset_right = 640.0
 offset_bottom = 371.0
 
 [node name="Imagem" type="TextureRect" parent="conteudo"]
+visible = false
+texture_filter = 1
 offset_left = 128.0
 offset_top = 73.0
-offset_right = 485.0
-offset_bottom = 255.0
+offset_right = 488.0
+offset_bottom = 308.0
+texture = ExtResource("3_piomu")
 
 [node name="Label" type="Label" parent="conteudo"]
-offset_left = 233.0
-offset_top = 174.0
-offset_right = 572.0
-offset_bottom = 197.0
-text = "vote no nosso jogo "
+visible = false
+offset_left = 216.0
+offset_top = 159.0
+offset_right = 425.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5elrp")
+text = "DIA DO DESASTRE"
 vertical_alignment = 1
 autowrap_mode = 2
 
