@@ -109,9 +109,7 @@ func mostrar_texto_com_efeito(texto):
 	await get_tree().create_timer(0.1).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		if letra != " ":
-			som_fala.play()
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.00).timeout
 	pode_avancar = true
 
 

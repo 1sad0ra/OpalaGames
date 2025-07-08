@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6swet5ftgsvp"]
+
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="1_66avy"]
+[ext_resource type="Script" path="res://scripts/ui_scripts/resposta_menu.gd" id="1_bmj24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66avy"]
+bg_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.190762, 0.190762, 0.190762, 0.490196)
+shadow_size = 1
+shadow_offset = Vector2(12, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr8fm"]
+bg_color = Color(1, 1, 1, 0.819608)
+shadow_color = Color(0.27451, 0.27451, 0.27451, 0.345098)
+shadow_size = 1
+shadow_offset = Vector2(12, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bmj24"]
+bg_color = Color(1, 1, 1, 0.203922)
+border_color = Color(1, 1, 1, 0.117647)
+shadow_color = Color(0.915189, 0.915189, 0.915189, 0.835294)
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivfu6"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhgab"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.128344, 0.128344, 0.128344, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(6, 0)
+
+[sub_resource type="InputEventAction" id="InputEventAction_l31ko"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_280wa"]
+events = [SubResource("InputEventAction_l31ko")]
+
+[node name="resposta_menu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_bmj24")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.0980392)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -20.0
+offset_right = 278.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit1" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.73859, 0.73859, 0.73859, 1)
+theme_override_colors/font_selected_color = Color(0.386757, 0.386757, 0.386757, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_66avy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
+alignment = 1
+max_length = 1
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.73859, 0.73859, 0.73859, 1)
+theme_override_colors/font_selected_color = Color(0.386757, 0.386757, 0.386757, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_66avy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
+alignment = 1
+max_length = 1
+
+[node name="LineEdit3" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.73859, 0.73859, 0.73859, 1)
+theme_override_colors/font_selected_color = Color(0.386757, 0.386757, 0.386757, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_66avy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
+alignment = 1
+max_length = 1
+
+[node name="LineEdit4" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.73859, 0.73859, 0.73859, 1)
+theme_override_colors/font_selected_color = Color(0.386757, 0.386757, 0.386757, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_66avy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
+alignment = 1
+max_length = 1
+
+[node name="LineEdit5" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.73859, 0.73859, 0.73859, 1)
+theme_override_colors/font_selected_color = Color(0.386757, 0.386757, 0.386757, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_66avy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
+alignment = 1
+max_length = 1
+
+[node name="Voltar_Button1" type="Button" parent="."]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 115.0
+offset_bottom = 62.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bmj24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ivfu6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dhgab")
+shortcut = SubResource("Shortcut_280wa")
+text = "Voltar"
+
+[node name="Confirmar_Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 418.0
+offset_top = 234.0
+offset_right = 606.0
+offset_bottom = 274.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_66avy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bmj24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ivfu6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dhgab")
+shortcut = SubResource("Shortcut_280wa")
+text = "Confirmar"
+
+[connection signal="pressed" from="Voltar_Button1" to="." method="_on_voltar_button_1_pressed"]
+[connection signal="pressed" from="Confirmar_Button2" to="." method="_on_confirmar_button_2_pressed"]
