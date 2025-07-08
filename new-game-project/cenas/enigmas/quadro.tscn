@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg4mahjbkxhol"]
+
+[ext_resource type="Script" uid="uid://d0t2u3au2ctli" path="res://quadro.gd" id="1_gql2h"]
+[ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_ah07o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7l76"]
+size = Vector2(58, 31.5)
+
+[node name="quadro" type="Area2D"]
+script = ExtResource("1_gql2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_ah07o")
+region_enabled = true
+region_rect = Rect2(12.4869, 170.316, 64.6579, 35.4079)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2.25)
+shape = SubResource("RectangleShape2D_f7l76")
+
+[node name="conteudo" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="conteudo"]
+visible = false
+offset_right = 640.0
+offset_bottom = 371.0
+
+[node name="Imagem" type="TextureRect" parent="conteudo"]
+offset_left = 128.0
+offset_top = 73.0
+offset_right = 485.0
+offset_bottom = 255.0
+
+[node name="Label" type="Label" parent="conteudo"]
+offset_left = 233.0
+offset_top = 174.0
+offset_right = 572.0
+offset_bottom = 197.0
+text = "vote no nosso jogo "
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
