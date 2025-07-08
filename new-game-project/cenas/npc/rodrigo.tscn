@@ -1,9 +1,45 @@
-[gd_scene load_steps=11 format=3 uid="uid://bn4fdjbhpl08v"]
+[gd_scene load_steps=20 format=3 uid="uid://bn4fdjbhpl08v"]
 
 [ext_resource type="Script" uid="uid://r05eaej0gvuk" path="res://scripts/npc/area_2d.gd" id="1_1onm1"]
 [ext_resource type="Texture2D" uid="uid://bknvelsstx2jb" path="res://assets/Personagens/Rodrigo/new_atlas_texture.tres" id="2_8vu3r"]
 [ext_resource type="Texture2D" uid="uid://cpniq7i3cp11n" path="res://assets/Personagens/Rodrigo/Rodrigo_pixilart-sprite.png" id="3_kahmu"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_x36p7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x36p7"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qocj5"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llhoi"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne8j3"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsiha"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hlff"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfe4c"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehwir"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtmce"]
+atlas = ExtResource("3_kahmu")
+region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8iwb"]
 atlas = ExtResource("3_kahmu")
@@ -11,6 +47,43 @@ region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2811l"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x36p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qocj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llhoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne8j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsiha")
+}],
+"loop": true,
+"name": &"andar_baixo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hlff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfe4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehwir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtmce")
+}],
+"loop": true,
+"name": &"andar_cima",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_8vu3r")
@@ -44,7 +117,7 @@ script = ExtResource("1_1onm1")
 sprite_frames = SubResource("SpriteFrames_2811l")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.939938
+frame_progress = 0.45093
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
