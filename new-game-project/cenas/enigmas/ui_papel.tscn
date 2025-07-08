@@ -18,7 +18,6 @@ offset_left = 288.0
 offset_top = 136.0
 offset_right = 402.0
 offset_bottom = 255.0
-texture = ExtResource("2_pjep5")
 stretch_mode = 4
 
 [node name="Texto" type="Label" parent="."]
