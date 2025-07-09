@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxnpjijlqhnwj"]
+
+[ext_resource type="Texture2D" uid="uid://bftv436ty6vgs" path="res://assets/Mapa/cofrefechado.png" id="1_np0l5"]
+[ext_resource type="Texture2D" uid="uid://uk26p51np1wa" path="res://assets/Mapa/cofreaberto.png" id="2_8l644"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bs7v"]
+atlas = ExtResource("1_np0l5")
+region = Rect2(0, 0, 58, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8tb7"]
+atlas = ExtResource("2_8l644")
+region = Rect2(0, 0, 58, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x00o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bs7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8tb7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15uim"]
+radius = 20.0998
+
+[sub_resource type="Animation" id="Animation_aqchf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0od80"]
+resource_name = "abrircofre"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_npg63"]
+_data = {
+&"RESET": SubResource("Animation_aqchf"),
+&"abrircofre": SubResource("Animation_0od80")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kj4ae"]
+
+[node name="enigma2" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x00o4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 4)
+shape = SubResource("CircleShape2D_15uim")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_npg63")
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_kj4ae")
