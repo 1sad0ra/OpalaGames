@@ -1,6 +1,7 @@
 extends Area2D
 
-@export var destino: String = ""  # Caminho da próxima cena
+@export var destino: String = ""      # caminho da cena para onde a porta leva
+@export var nome_saida: String = ""   # nome da entrada na cena de destino
 
 @onready var anim = $AnimationPlayer
 @onready var som = $AudioStreamPlayer2D
@@ -12,6 +13,8 @@ func _process(_delta):
 		anim.play("abrir")
 		som.play()
 		await anim.animation_finished
+
+		GameState.porta_saida = nome_saida
 		get_tree().change_scene_to_file(destino)
 
 func _on_body_entered(body):

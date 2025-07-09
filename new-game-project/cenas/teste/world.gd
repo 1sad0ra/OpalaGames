@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var player = $player
+@onready var player = $Ysort/player
 @onready var posicoes_entrada = $posicoes_entrada
 
 func _ready():

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://lcn6xfck7uv"]
+[gd_scene load_steps=9 format=4 uid="uid://lcn6xfck7uv"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_04pdf"]
+[ext_resource type="Script" uid="uid://c571r6tvxsrdk" path="res://cenas/teste/sala_01l.gd" id="1_ax0r5"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="2_04sss"]
 [ext_resource type="PackedScene" uid="uid://bsg3u25etbs1d" path="res://cenas/caracteristicas/player/player.tscn" id="3_bxx3x"]
 [ext_resource type="PackedScene" uid="uid://do43ctveiyn4a" path="res://cenas/interações/livro_tutorial.tscn" id="4_bxx3x"]
@@ -10,6 +11,7 @@
 
 [node name="salaTutorial" type="Node2D"]
 rotation = -0.00435567
+script = ExtResource("1_ax0r5")
 
 [node name="parede" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -70,6 +72,7 @@ tile_set = ExtResource("1_04pdf")
 [node name="porta2" parent="." instance=ExtResource("2_04sss")]
 position = Vector2(469.8, 47.0467)
 destino = "res://cenas/teste/world.tscn"
+nome_saida = "sala_01"
 
 [node name="player" parent="." instance=ExtResource("3_bxx3x")]
 position = Vector2(230.54, 106.005)
@@ -96,3 +99,9 @@ tile_map_data = PackedByteArray("AAAPAAMACAAQAAoAAAAPAAQACAAQAAsAAAA=")
 tile_set = ExtResource("1_04pdf")
 
 [node name="mensagemUI" parent="." instance=ExtResource("7_sv8r6")]
+visible = false
+
+[node name="posicoes_entrada" type="Node2D" parent="."]
+
+[node name="entrada_sala_01l" type="Marker2D" parent="posicoes_entrada"]
+position = Vector2(469.765, 55.0467)
