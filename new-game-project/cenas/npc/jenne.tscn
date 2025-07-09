@@ -109,7 +109,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrsdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yubvh"]
-size = Vector2(126, 60)
+size = Vector2(88, 60)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swgmj"]
 bg_color = Color(0.0196078, 0.0196078, 0.0196078, 0.470588)
@@ -136,7 +136,7 @@ shape = SubResource("CapsuleShape2D_xrsdb")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, 2)
+position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_yubvh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

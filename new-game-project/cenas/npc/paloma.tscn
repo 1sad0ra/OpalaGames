@@ -107,7 +107,7 @@ shadow_size = 7
 shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5yo"]
-size = Vector2(114, 66)
+size = Vector2(85, 49)
 
 [node name="Paloma" type="CharacterBody2D"]
 script = ExtResource("1_b4xfa")
@@ -169,7 +169,7 @@ horizontal_alignment = 1
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 2)
+position = Vector2(-2.5, 0.5)
 shape = SubResource("RectangleShape2D_6t5yo")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

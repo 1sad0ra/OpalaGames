@@ -76,10 +76,10 @@ func proxima_fala():
 
 
 func mostrar_texto_com_efeito(texto):
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.05).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.00).timeout
+		await get_tree().create_timer(0.005).timeout
 	pode_avancar = true
 
 func encerrar_dialogo():
