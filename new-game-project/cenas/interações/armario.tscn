@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq53sbkde1vrg"]
+
+[ext_resource type="Script" uid="uid://bgxcai7j8cjnr" path="res://armario.gd" id="1_ayeqo"]
+[ext_resource type="Texture2D" uid="uid://daa58nlencbiq" path="res://cenas/enigmas/imagens/estantedelivros.png" id="2_2uugu"]
+[ext_resource type="Texture2D" uid="uid://c2rwq1ffwvwsy" path="res://assets/Mapa/opalalivro/livro_esquerda.png" id="3_tc3vr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epvci"]
+radius = 21.0
+height = 64.0
+
+[node name="Armario" type="Area2D"]
+script = ExtResource("1_ayeqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2uugu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_epvci")
+
+[node name="conteudo" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="conteudo"]
+offset_right = 641.0
+offset_bottom = 359.0
+
+[node name="Imagem" type="TextureRect" parent="conteudo"]
+texture_filter = 1
+offset_left = 283.0
+offset_top = 123.0
+offset_right = 369.0
+offset_bottom = 195.0
+texture = ExtResource("3_tc3vr")
+
+[node name="Label" type="Label" parent="conteudo"]
+offset_left = 325.0
+offset_top = 141.0
+offset_right = 365.0
+offset_bottom = 164.0
