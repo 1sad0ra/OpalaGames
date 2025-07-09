@@ -1,7 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6swet5ftgsvp"]
+[gd_scene load_steps=15 format=3 uid="uid://b6swet5ftgsvp"]
 
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="1_66avy"]
 [ext_resource type="Script" uid="uid://8fgrhsxwtple" path="res://scripts/ui_scripts/resposta_menu.gd" id="1_bmj24"]
+[ext_resource type="AudioStream" uid="uid://c00f3aynuhcuo" path="res://sounds/click-21156.wav" id="3_280wa"]
+[ext_resource type="AudioStream" uid="uid://v84oetfns8fu" path="res://sounds/ui-sounds-pack-3-7-359721.mp3" id="4_hr8fm"]
+[ext_resource type="AudioStream" uid="uid://byqe4s8m7e5r4" path="res://sounds/keyboard.wav" id="5_jsobw"]
+[ext_resource type="AudioStream" uid="uid://jun61i6ximla" path="res://sounds/error.wav" id="6_hr8fm"]
+[ext_resource type="AudioStream" uid="uid://dfxe63o5e0h2j" path="res://sounds/correct.wav" id="7_jsobw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66avy"]
 bg_color = Color(1, 1, 1, 1)
@@ -137,7 +142,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_hr8fm")
 alignment = 1
 max_length = 1
 
-[node name="Voltar_Button1" type="Button" parent="."]
+[node name="Voltar_Button1" type="Button" parent="." groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 offset_left = 23.0
 offset_top = 22.0
@@ -155,7 +160,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_dhgab")
 shortcut = SubResource("Shortcut_280wa")
 text = "Voltar"
 
-[node name="Confirmar_Button2" type="Button" parent="."]
+[node name="Confirmar_Button2" type="Button" parent="." groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 offset_left = 418.0
 offset_top = 234.0
@@ -172,6 +177,29 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ivfu6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dhgab")
 shortcut = SubResource("Shortcut_280wa")
 text = "Confirmar"
+
+[node name="ClickPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_280wa")
+volume_db = 24.0
+
+[node name="HoverPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("4_hr8fm")
+
+[node name="TypePlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("5_jsobw")
+
+[node name="ErrorPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("6_hr8fm")
+volume_db = 24.0
+
+[node name="CorrectPlayer" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("7_jsobw")
+volume_db = 24.0
 
 [connection signal="pressed" from="Voltar_Button1" to="." method="_on_voltar_button_1_pressed"]
 [connection signal="pressed" from="Confirmar_Button2" to="." method="_on_confirmar_button_2_pressed"]
