@@ -8,13 +8,15 @@ extends CanvasLayer
 func _ready() -> void:
 	visible = false 
 
-func show_paper(texture: Texture2D, text: String):
+func show_paper():
 	
 	var Imagem = preload("res://assets/Personagens/Paloma/new_atlas_texture.tres")
 
 	visible = true
-	imagem.texture = Imagem
-	texto.text = text
+	imagem.visible = true
+	texto.visible= true
 
 func fechar():
 	visible = false
+	imagem.visible = false
+	texto.visible= false

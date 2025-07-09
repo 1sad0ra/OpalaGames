@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://exqybbnvmbkw"]
+
+[ext_resource type="Script" uid="uid://l4koawy0vlvm" path="res://cenas/interações/mensagem_ui.gd" id="1_iobs4"]
+
+[node name="mensageM_SALA1" type="CanvasLayer"]
+script = ExtResource("1_iobs4")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 639.0
+offset_bottom = 359.0
+
+[node name="mensagem" type="Label" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 156.0
+offset_top = 134.0
+offset_right = 474.0
+offset_bottom = 244.0
+text = "PROCURE OS ALUNOS E FALE COM OS SUPERIORES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="tempo_mensagem" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="tempo_mensagem" to="." method="_on_tempo_mensagem_timeout"]
