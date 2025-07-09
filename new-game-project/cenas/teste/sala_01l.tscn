@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://lcn6xfck7uv"]
+[gd_scene load_steps=8 format=4 uid="uid://lcn6xfck7uv"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_04pdf"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="2_04sss"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://do43ctveiyn4a" path="res://cenas/interações/livro_tutorial.tscn" id="4_bxx3x"]
 [ext_resource type="PackedScene" uid="uid://d3dhx312ggg4d" path="res://cenas/interações/conteudo.tscn" id="5_xibja"]
 [ext_resource type="PackedScene" uid="uid://bg4mahjbkxhol" path="res://cenas/interações/quadro.tscn" id="6_xibja"]
+[ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="7_sv8r6"]
 
 [node name="salaTutorial" type="Node2D"]
 rotation = -0.00435567
@@ -82,3 +83,5 @@ visible = false
 
 [node name="quadro" parent="." instance=ExtResource("6_xibja")]
 position = Vector2(382.887, 26.668)
+
+[node name="pause_menu" parent="." instance=ExtResource("7_sv8r6")]
