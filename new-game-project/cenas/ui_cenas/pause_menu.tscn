@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://1alig4m0bgfe"]
+[gd_scene load_steps=10 format=3 uid="uid://1alig4m0bgfe"]
 
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="1_4p0wh"]
 [ext_resource type="Script" uid="uid://b5d6bxa7r0csu" path="res://scripts/ui_scripts/pause_menu.gd" id="1_l31ko"]
+[ext_resource type="AudioStream" uid="uid://c00f3aynuhcuo" path="res://sounds/click-21156.wav" id="3_d1soj"]
+[ext_resource type="AudioStream" uid="uid://v84oetfns8fu" path="res://sounds/ui-sounds-pack-3-7-359721.mp3" id="4_nsymu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l31ko"]
 bg_color = Color(1, 1, 1, 0.203922)
@@ -48,7 +50,7 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Voltar_Button1" type="Button" parent="menu_holder"]
+[node name="Voltar_Button1" type="Button" parent="menu_holder" groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -63,7 +65,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_sfxr3")
 shortcut = SubResource("Shortcut_krjn7")
 text = "Voltar"
 
-[node name="Menu_Button2" type="Button" parent="menu_holder"]
+[node name="Menu_Button2" type="Button" parent="menu_holder" groups=["menu_buttons"]]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -76,6 +78,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l31ko")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_krjn7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sfxr3")
 text = "Tela Inicial"
+
+[node name="ClickPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_d1soj")
+volume_db = 24.0
+
+[node name="HoverPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nsymu")
 
 [connection signal="pressed" from="menu_holder/Voltar_Button1" to="." method="_on_voltar_button_1_pressed"]
 [connection signal="pressed" from="menu_holder/Menu_Button2" to="." method="_on_menu_button_2_pressed"]
