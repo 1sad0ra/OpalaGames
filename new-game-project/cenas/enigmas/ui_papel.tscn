@@ -10,20 +10,43 @@ script = ExtResource("1_pjep5")
 paper_texture = ExtResource("2_pjep5")
 
 [node name="Panel" type="Panel" parent="."]
-offset_top = -2.0
-offset_right = 40.0
-offset_bottom = 38.0
+offset_left = 3.0
+offset_top = -10.0
+offset_right = 43.0
+offset_bottom = 30.0
 scale = Vector2(16, 9.05556)
 
 [node name="Imagem" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 220.0
-offset_top = 87.0
-offset_right = 384.0
-offset_bottom = 244.0
+offset_left = 206.0
+offset_top = 37.0
+offset_right = 410.0
+offset_bottom = 336.0
 texture = SubResource("CanvasTexture_pjep5")
-stretch_mode = 4
 
 [node name="Texto" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 206.0
+offset_top = 34.0
+offset_right = 561.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "Meu caro amigo,
+
+Sei o quanto foi difícil encerrar o projeto…
+ mas não tivemos escolha.
+A situação no IFPI Pedro II saiu do nosso
+ controle. Tranquei o Projeto A77B no cofre
+ da diretoria — foi a única saída segura que 
+encontrei antes de tudo desmoronar.
+
+Caso um dia precise acessá-lo novamente,
+ saiba que a senha continua a mesma.
+
+Mas, se sua memória lhe falhar… 
+aqui vai uma pista:
+o segundo conjunto de números é o valor 
+decimal da sequência 11110.
+
+Que esse segredo permaneça oculto até
+ que o IFPI esteja pronto para enfrentá-lo."
