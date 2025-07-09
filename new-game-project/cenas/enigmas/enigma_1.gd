@@ -22,7 +22,7 @@ func _on_body_exited(body):
 
 func _process(_delta):
 	if player_near and Input.is_action_just_pressed("interact"):
-		papel.show_paper(paper_texture, paper_text)
+		papel.show_paper()
 		
 	elif player_near and Input.is_action_just_pressed("cancelar"):
 		papel.fechar()

@@ -1,4 +1,5 @@
 extends Area2D
+@onready var label_interacao: Label = $LabelInteracao
 
 '@export var textura: Texture2D
 @export var text: String'
@@ -10,12 +11,16 @@ var player_near = false
 
 func _on_body_entered(body):
 	if body.name == "player":
+		label_interacao.text = " E "
+		label_interacao.visible = true
 		player_near = true
-		print("vdd")
+	
 		
 func _on_body_exited(body):
 	
 	if  body.name == "player":
+		label_interacao.text = " E "
+		label_interacao.visible = false
 		player_near = false
 	
 

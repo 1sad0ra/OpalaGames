@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnsql2jdjgxs"]
+[gd_scene load_steps=6 format=3 uid="uid://bnsql2jdjgxs"]
 
 [ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="1_h66xb"]
+[ext_resource type="Texture2D" uid="uid://b8e32scsmcvqk" path="res://assets/Mapa/mapatileset.png" id="2_2yk73"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2yk73"]
 texture = ExtResource("1_h66xb")
@@ -14,9 +15,36 @@ texture = ExtResource("1_h66xb")
 6:5/0 = 0
 6:5/0/texture_origin = Vector2i(0, 14)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaf1"]
+texture = ExtResource("2_2yk73")
+17:8/0 = 0
+18:8/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+17:9/0 = 0
+17:10/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+8:8/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+10:8/0 = 0
+9:8/0 = 0
+19:8/0 = 0
+19:9/0 = 0
+19:10/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_xdaf1"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2yk73")
+sources/1 = SubResource("TileSetAtlasSource_xdaf1")
 
 [node name="objetosTerreno" type="TileMapLayer"]
 y_sort_enabled = true

@@ -12,9 +12,9 @@ offset_bottom = 359.0
 [node name="mensagem" type="Label" parent="."]
 offset_left = 203.0
 offset_top = 155.0
-offset_right = 387.0
+offset_right = 432.0
 offset_bottom = 204.0
-text = "desvende os enigmas e abra o cofre"
+text = "DESVENDE OS ENIGMAS E ABRA O COFRE"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
