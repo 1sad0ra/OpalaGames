@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bg4mahjbkxhol" path="res://cenas/interações/quadro.tscn" id="3_2dyqj"]
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_b0oyg"]
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_o085d"]
-[ext_resource type="PackedScene" uid="uid://be6ui16d1pi1k" path="res://cenas/enigmas/enigma_1.tscn" id="5_aicvf"]
+[ext_resource type="PackedScene" uid="uid://cwxfxbvq16bpt" path="res://cenas/enigmas/enigma_1.tscn" id="5_aicvf"]
 [ext_resource type="PackedScene" uid="uid://c2jeogadomjoo" path="res://cenas/enigmas/ui_papel.tscn" id="6_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://bp6sxjp2ti46e" path="res://cenas/interações/mensagem_ui.tscn" id="7_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://dgr6d5yd7wclw" path="res://cenas/enigmas/papel_cofre.tscn" id="10_ty23l"]
@@ -112,4 +112,4 @@ visible = false
 visible = false
 
 [node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
-position = Vector2(460, 100)
+position = Vector2(456, 105)

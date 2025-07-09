@@ -43,10 +43,13 @@ offset_right = 292.0
 offset_bottom = 207.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = "Antes de iniciar sua jornada, aqui vai o básico:
+text = " Antes de iniciar sua jornada, memorize o essencial:
+W, A, S, D — Para se mover pelo IFPI
 
-WASD para se mover
+E — Interagir com objetos e pessoas
 
-E para interagir com objetos e portas"
+Enter — Abrir portas
+
+Espaço — Sair de interações"
 vertical_alignment = 1
 autowrap_mode = 2
