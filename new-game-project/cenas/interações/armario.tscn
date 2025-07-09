@@ -9,6 +9,7 @@ radius = 21.0
 height = 64.0
 
 [node name="Armario" type="Area2D"]
+texture_filter = 1
 script = ExtResource("1_ayeqo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,12 +20,15 @@ position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_epvci")
 
 [node name="conteudo" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="conteudo"]
+visible = false
 offset_right = 641.0
 offset_bottom = 359.0
 
 [node name="Imagem" type="TextureRect" parent="conteudo"]
+visible = false
 texture_filter = 1
 offset_left = 283.0
 offset_top = 123.0
@@ -33,7 +37,11 @@ offset_bottom = 195.0
 texture = ExtResource("3_tc3vr")
 
 [node name="Label" type="Label" parent="conteudo"]
+visible = false
 offset_left = 325.0
 offset_top = 141.0
 offset_right = 365.0
 offset_bottom = 164.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
