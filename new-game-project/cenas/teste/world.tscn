@@ -99,7 +99,7 @@ visible = false
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("2_ehqlt")]
-position = Vector2(203, 445)
+position = Vector2(373, -173)
 
 [node name="objetosTerreno" parent="Ysort" instance=ExtResource("5_jt30a")]
 texture_filter = 1

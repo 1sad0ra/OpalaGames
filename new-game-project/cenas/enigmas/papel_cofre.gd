@@ -7,6 +7,7 @@ extends Area2D
 @onready var label_3: Label = $CanvasLayer/Label3
 @onready var label_4: Label = $CanvasLayer/Label4
 @onready var imagem: TextureRect = $CanvasLayer/Imagem
+@onready var label_interacao: Label = $CanvasLayer/LabelInteracao
 
 
 var player_perto = false

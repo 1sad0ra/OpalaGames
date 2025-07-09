@@ -32,6 +32,7 @@ shape = SubResource("CircleShape2D_jkd61")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
 offset_top = -2.0
 offset_right = 641.0
 offset_bottom = 357.0
