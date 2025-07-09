@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://do43ctveiyn4a" path="res://cenas/interações/livro_tutorial.tscn" id="4_bxx3x"]
 [ext_resource type="PackedScene" uid="uid://d3dhx312ggg4d" path="res://cenas/interações/conteudo.tscn" id="5_xibja"]
 [ext_resource type="PackedScene" uid="uid://bg4mahjbkxhol" path="res://cenas/interações/quadro.tscn" id="6_xibja"]
-
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="7_sv8r6"]
-
 
 [node name="salaTutorial" type="Node2D"]
 rotation = -0.00435567
@@ -92,11 +90,9 @@ visible = false
 [node name="quadro" parent="." instance=ExtResource("6_xibja")]
 position = Vector2(382.887, 26.668)
 
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAPAAMACAAQAAoAAAAPAAQACAAQAAsAAAA=")
 tile_set = ExtResource("1_04pdf")
 
 [node name="mensagemUI" parent="." instance=ExtResource("7_sv8r6")]
-

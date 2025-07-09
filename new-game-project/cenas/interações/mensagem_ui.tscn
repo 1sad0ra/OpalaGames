@@ -20,7 +20,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="tempo_mensagem" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 one_shot = true
 
 [connection signal="timeout" from="tempo_mensagem" to="." method="_on_tempo_mensagem_timeout"]

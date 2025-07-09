@@ -89,7 +89,7 @@ position = Vector2(-36, 448)
 destino = "res://cenas/teste/sala_01l.tscn"
 
 [node name="porta2" parent="." instance=ExtResource("3_otrou")]
-position = Vector2(1207, 447)
+position = Vector2(1206, 447)
 destino = "res://cenas/teste/sala_tutorial.tscn"
 
 [node name="pause_menu" parent="." instance=ExtResource("4_favmu")]
@@ -99,7 +99,7 @@ visible = false
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("2_ehqlt")]
-position = Vector2(373, -173)
+position = Vector2(-35, 461)
 
 [node name="objetosTerreno" parent="Ysort" instance=ExtResource("5_jt30a")]
 texture_filter = 1
