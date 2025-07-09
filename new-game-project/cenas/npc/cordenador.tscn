@@ -184,7 +184,7 @@ height = 28.0
 bg_color = Color(0.0705882, 0.0705882, 0.0705882, 0.470588)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utw41"]
-size = Vector2(102, 47)
+size = Vector2(74, 42.125)
 
 [sub_resource type="LabelSettings" id="LabelSettings_utw41"]
 font = ExtResource("3_lxycr")
@@ -243,7 +243,7 @@ stretch_mode = 5
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2, 3)
+position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_utw41")
 
 [node name="LabelInteraçao" type="Label" parent="."]

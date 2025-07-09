@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmfevv2j06yii"]
+
+[ext_resource type="Script" uid="uid://dymq4p0fp2m2y" path="res://scripts/npc/diretor.gd" id="1_xsr67"]
+[ext_resource type="Texture2D" uid="uid://diwiectbvwry7" path="res://assets/Personagens/Diretor/diretor.png" id="1_yvi1d"]
+[ext_resource type="Texture2D" uid="uid://deoggwegbmp4q" path="res://assets/Personagens/Diretor/new_atlas_texture.tres" id="2_a7ihm"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="2_rsddr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7ihm"]
+atlas = ExtResource("1_yvi1d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8h4q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a7ihm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7ihm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g41pn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aph7d"]
+bg_color = Color(0.0117647, 0.0117647, 0.0117647, 0.470588)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aplp4"]
+font = ExtResource("2_rsddr")
+shadow_size = 7
+shadow_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkr1d"]
+size = Vector2(71, 45)
+
+[node name="Diretor" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_xsr67")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l8h4q")
+frame_progress = 0.577295
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g41pn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CaixaDialogo" type="Label" parent="CanvasLayer"]
+offset_left = 65.0
+offset_top = 228.0
+offset_right = 585.0
+offset_bottom = 324.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_aph7d")
+autowrap_mode = 2
+
+[node name="TextoDialogo" type="Label" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 254.0
+offset_right = 581.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+
+[node name="NomeLabel" type="Label" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 231.0
+offset_right = 245.0
+offset_bottom = 254.0
+
+[node name="Retrato" type="TextureRect" parent="CanvasLayer"]
+offset_left = 73.0
+offset_top = 248.0
+offset_right = 133.0
+offset_bottom = 307.0
+stretch_mode = 5
+
+[node name="LabelInteraçao" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -40.0
+offset_right = 21.0
+offset_bottom = -17.0
+label_settings = SubResource("LabelSettings_aplp4")
+horizontal_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.5, 1.5)
+shape = SubResource("RectangleShape2D_jkr1d")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
