@@ -10,8 +10,6 @@ func _ready() -> void:
 
 func show_paper():
 	
-	var Imagem = preload("res://assets/Personagens/Paloma/new_atlas_texture.tres")
-
 	visible = true
 	imagem.visible = true
 	texto.visible= true

@@ -38,7 +38,6 @@ offset_bottom = 308.0
 texture = ExtResource("3_piomu")
 
 [node name="Label" type="Label" parent="conteudo"]
-visible = false
 offset_left = 216.0
 offset_top = 159.0
 offset_right = 425.0
@@ -46,6 +45,16 @@ offset_bottom = 194.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_5elrp")
 text = "DIA DO DESASTRE"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label_interacao" type="Label" parent="conteudo"]
+offset_left = -33.0
+offset_top = -49.0
+offset_right = 46.0
+offset_bottom = -17.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5elrp")
 vertical_alignment = 1
 autowrap_mode = 2
 

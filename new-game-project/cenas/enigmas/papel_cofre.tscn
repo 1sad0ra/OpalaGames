@@ -38,7 +38,6 @@ offset_right = 641.0
 offset_bottom = 357.0
 
 [node name="Imagem" type="TextureRect" parent="CanvasLayer"]
-visible = false
 offset_left = 209.0
 offset_top = 44.0
 offset_right = 432.0
@@ -46,7 +45,6 @@ offset_bottom = 343.0
 texture = SubResource("CanvasTexture_4prbm")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
 offset_left = 221.0
 offset_top = 56.0
 offset_right = 381.0
@@ -56,7 +54,6 @@ theme_override_font_sizes/font_size = 10
 text = "A senha está trancada no tempo."
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-visible = false
 offset_left = 228.0
 offset_top = 75.0
 offset_right = 523.0
@@ -68,7 +65,6 @@ text = "• Os dois primeiros dígitos vêm do dia
 "
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
-visible = false
 offset_left = 230.0
 offset_top = 111.0
 offset_right = 525.0
@@ -79,7 +75,6 @@ text = "•Depois, um momento digital:
  um número codificado"
 
 [node name="Label4" type="Label" parent="CanvasLayer"]
-visible = false
 offset_left = 229.0
 offset_top = 152.0
 offset_right = 524.0
