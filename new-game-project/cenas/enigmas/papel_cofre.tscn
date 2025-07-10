@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgr6d5yd7wclw"]
+[gd_scene load_steps=7 format=3 uid="uid://dgr6d5yd7wclw"]
 
 [ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="1_h4ro7"]
 [ext_resource type="Script" uid="uid://pq7j8qi8hwjh" path="res://cenas/enigmas/papel_cofre.gd" id="1_jkd61"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_4prbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4prbm"]
 radius = 4.12311
@@ -29,6 +30,18 @@ shape = SubResource("CircleShape2D_4prbm")
 position = Vector2(1, -6)
 shape = SubResource("CircleShape2D_jkd61")
 
+[node name="Label_interacao" type="Label" parent="."]
+texture_filter = 1
+offset_left = -2.0
+offset_top = -18.0
+offset_right = 15.0
+offset_bottom = -9.0
+rotation = 1.452
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4prbm")
+theme_override_font_sizes/font_size = 10
+vertical_alignment = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
@@ -38,6 +51,7 @@ offset_right = 641.0
 offset_bottom = 357.0
 
 [node name="Imagem" type="TextureRect" parent="CanvasLayer"]
+visible = false
 offset_left = 209.0
 offset_top = 44.0
 offset_right = 432.0
@@ -45,6 +59,7 @@ offset_bottom = 343.0
 texture = SubResource("CanvasTexture_4prbm")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 221.0
 offset_top = 56.0
 offset_right = 381.0
@@ -54,6 +69,7 @@ theme_override_font_sizes/font_size = 10
 text = "A senha está trancada no tempo."
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 228.0
 offset_top = 75.0
 offset_right = 523.0
@@ -65,6 +81,7 @@ text = "• Os dois primeiros dígitos vêm do dia
 "
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 230.0
 offset_top = 111.0
 offset_right = 525.0
@@ -75,6 +92,7 @@ text = "•Depois, um momento digital:
  um número codificado"
 
 [node name="Label4" type="Label" parent="CanvasLayer"]
+visible = false
 offset_left = 229.0
 offset_top = 152.0
 offset_right = 524.0

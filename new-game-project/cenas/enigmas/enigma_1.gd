@@ -4,6 +4,7 @@ extends Area2D
 @export var paper_text: String
 
 @onready var papel: CanvasLayer = get_parent().get_node("ui_papel")
+@onready var label_interacao: Label = $Label_interacao
 
 
 var player_near = false
@@ -11,12 +12,15 @@ var player_near = false
 func _on_body_entered(body):
 	
 	if body.name == "player":
+		label_interacao.text = " E "
+		label_interacao.visible = true
 		player_near = true
-		print("vdd")
 		
 func _on_body_exited(body):
 	
 	if  body.name == "player":
+		label_interacao.text = " E "
+		label_interacao.visible = false
 		player_near = false
 	
 

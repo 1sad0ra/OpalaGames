@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://be6ui16d1pi1k"]
+[gd_scene load_steps=14 format=3 uid="uid://be6ui16d1pi1k"]
 
 [ext_resource type="Script" uid="uid://bf0o3pc02iwg4" path="res://cenas/enigmas/cofre_1.gd" id="1_tcx4q"]
 [ext_resource type="Texture2D" uid="uid://i0pjkhhug1ea" path="res://assets/Mapa/frentearmario.png" id="3_q2kna"]
 [ext_resource type="Texture2D" uid="uid://b86c2unk1fjm1" path="res://assets/Mapa/armarioaberto.png" id="4_3jwc0"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_820wl"]
 [ext_resource type="PackedScene" uid="uid://bl0fgo0cgp7to" path="res://cenas/npc/robo.tscn" id="4_b04w5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q2kna"]
@@ -67,7 +68,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6fe17"]
-radius = 15.2971
+radius = 19.105
 
 [node name="cofre_1" type="Area2D"]
 script = ExtResource("1_tcx4q")
@@ -93,9 +94,19 @@ libraries = {
 position = Vector2(3, 11)
 shape = SubResource("CircleShape2D_6fe17")
 
+[node name="Label_interacao" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = -21.0
+offset_right = 41.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_820wl")
+theme_override_font_sizes/font_size = 10
+
 [node name="robo" parent="." instance=ExtResource("4_b04w5")]
 texture_filter = 1
-position = Vector2(14, 32)
+position = Vector2(13, 31)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
