@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://3jgt87ej63vx"]
+[gd_scene load_steps=12 format=3 uid="uid://3jgt87ej63vx"]
 
 [ext_resource type="Texture2D" uid="uid://ebnr6dstakrp" path="res://assets/Personagens/Isadora/Isadora_pixilart-sprite.png" id="1_pgk5t"]
 [ext_resource type="Script" uid="uid://dlmff3dcsr7j2" path="res://scripts/npc/isadora.gd" id="1_wun7m"]
 [ext_resource type="Texture2D" uid="uid://ckxkpo48mujqf" path="res://assets/Personagens/Isadora/new_atlas_texture.tres" id="2_4xtxe"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_qqens"]
+[ext_resource type="AudioStream" uid="uid://drowsrs0bl38d" path="res://sounds/somfala.wav" id="5_jf22q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xtxe"]
 atlas = ExtResource("1_pgk5t")
@@ -98,6 +99,9 @@ offset_right = 21.0
 offset_bottom = -28.0
 label_settings = SubResource("LabelSettings_wvf2v")
 horizontal_alignment = 1
+
+[node name="SomFala" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jf22q")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

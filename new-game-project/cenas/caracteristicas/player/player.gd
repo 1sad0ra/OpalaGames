@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 @export var speed := 200
 var direction := Vector2.ZERO
-var last_direction := Vector2.DOWN  # Última direção pressionada
+var last_direction := Vector2.DOWN
 
 @onready var anim = $AnimatedSprite2D
-@onready var passos = $passos  # Som de passos
+@onready var passos = $passos
+@onready var timer_passos = $timer_passos
 
 func _physics_process(delta):
 	if not GameState.player_pode_mover:
@@ -13,10 +14,9 @@ func _physics_process(delta):
 		move_and_slide()
 		anim.animation = "idle_down"
 		anim.play()
-		if passos.playing:
-			passos.stop()
+		update_som_passos()
 		return
-	
+
 	direction = Vector2.ZERO
 
 	if Input.is_action_pressed("ui_up"):
@@ -30,24 +30,19 @@ func _physics_process(delta):
 		direction.x += 1
 
 	if direction != Vector2.ZERO:
-		# Atualiza a última direção dominante
 		if direction.x != 0:
 			last_direction = Vector2(direction.x, 0)
 		elif direction.y != 0:
 			last_direction = Vector2(0, direction.y)
 
 	velocity = direction.normalized() * speed
-
-	if direction != Vector2.ZERO:
-		move_and_slide()
+	move_and_slide()
 
 	update_animation()
 	update_som_passos()
 
-
 func update_animation():
 	if direction == Vector2.ZERO:
-		# Animações de idle com base na última direção
 		if last_direction.y < 0:
 			anim.animation = "idle_up"
 		elif last_direction.y > 0:
@@ -57,7 +52,6 @@ func update_animation():
 		elif last_direction.x > 0:
 			anim.animation = "idle_right"
 	else:
-		# Animações de caminhada
 		if direction.y < 0:
 			anim.animation = "walk_up"
 		elif direction.y > 0:
@@ -69,11 +63,17 @@ func update_animation():
 
 	anim.play()
 
-
 func update_som_passos():
-	if direction != Vector2.ZERO:
-		if not passos.playing:
+	if GameState.player_pode_mover and direction != Vector2.ZERO:
+		if timer_passos.is_stopped():
 			passos.play()
+			timer_passos.start()
 	else:
-		if passos.playing:
+		if not timer_passos.is_stopped():
+			timer_passos.stop()
 			passos.stop()
+
+
+func _on_timer_passos_timeout():
+	if GameState.player_pode_mover and direction != Vector2.ZERO:
+		passos.play()

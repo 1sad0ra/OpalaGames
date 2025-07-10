@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://g1xcs7jsdm4q" path="res://assets/Personagens/Player_Socram/Socram_pixilart-sprite.png" id="1_0nm8a"]
 [ext_resource type="Script" uid="uid://bvxtljtdo42mo" path="res://cenas/caracteristicas/player/player.gd" id="1_74wcc"]
-[ext_resource type="AudioStream" uid="uid://dh36d1yqxrox6" path="res://sounds/footsteps-male-362053 (mp3cut.net).wav" id="3_74wcc"]
+[ext_resource type="AudioStream" uid="uid://cgxn7fdx7iyjt" path="res://sounds/spongebob-walk (mp3cut (mp3cut.net).wav" id="3_2231b"]
 [ext_resource type="AudioStream" uid="uid://drowsrs0bl38d" path="res://sounds/somfala.wav" id="4_2231b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrlbt"]
@@ -168,7 +168,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -201,6 +201,7 @@ position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_u1gk2")
 animation = &"walk_right"
 autoplay = "idle_down"
+frame_progress = 0.206682
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
@@ -209,9 +210,13 @@ shape = SubResource("CapsuleShape2D_j58ch")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="passos" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_74wcc")
-volume_db = 10.895
+stream = ExtResource("3_2231b")
+volume_db = -18.819
+
+[node name="timer_passos" type="Timer" parent="."]
+wait_time = 0.6
 
 [node name="SomFala" type="AudioStreamPlayer2D" parent="."]
-process_mode = 2
 stream = ExtResource("4_2231b")
+
+[connection signal="timeout" from="timer_passos" to="." method="_on_timer_passos_timeout"]

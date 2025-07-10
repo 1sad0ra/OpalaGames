@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3e72vbphvo62"
+path="res://.godot/imported/walking_6QdYC8X (mp3cut.net) (1).wav-603e3f64d6772dbd840332acebba1870.sample"
+
+[deps]
+
+source_file="res://sounds/walking_6QdYC8X (mp3cut.net) (1).wav"
+dest_files=["res://.godot/imported/walking_6QdYC8X (mp3cut.net) (1).wav-603e3f64d6772dbd840332acebba1870.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

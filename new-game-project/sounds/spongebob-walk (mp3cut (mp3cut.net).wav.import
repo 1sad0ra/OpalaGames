@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgxn7fdx7iyjt"
+path="res://.godot/imported/spongebob-walk (mp3cut (mp3cut.net).wav-56b56c76d650b53420495ca0e40486db.sample"
+
+[deps]
+
+source_file="res://sounds/spongebob-walk (mp3cut (mp3cut.net).wav"
+dest_files=["res://.godot/imported/spongebob-walk (mp3cut (mp3cut.net).wav-56b56c76d650b53420495ca0e40486db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

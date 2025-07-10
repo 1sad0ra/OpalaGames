@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://kqjvdlw2m74d"]
+[gd_scene load_steps=12 format=4 uid="uid://kqjvdlw2m74d"]
 
 [ext_resource type="Script" uid="uid://bmjnlrtc5e0eh" path="res://cenas/teste/sala_tutorial.gd" id="1_386iv"]
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_jx82w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c2jeogadomjoo" path="res://cenas/enigmas/ui_papel.tscn" id="6_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://bp6sxjp2ti46e" path="res://cenas/interações/mensagem_ui.tscn" id="7_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://dgr6d5yd7wclw" path="res://cenas/enigmas/papel_cofre.tscn" id="10_ty23l"]
+[ext_resource type="AudioStream" uid="uid://xj5xsqc0napx" path="res://sounds/frightening-place-109766.ogg" id="11_ev0tv"]
 
 [node name="salaTutorial" type="Node2D"]
 script = ExtResource("1_386iv")
@@ -119,3 +120,7 @@ position = Vector2(456, 105)
 
 [node name="entrada_sala_tutorial" type="Marker2D" parent="posicoes_entrada"]
 position = Vector2(541, 56)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ev0tv")
+autoplay = true

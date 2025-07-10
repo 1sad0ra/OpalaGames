@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dgoy1fogkmv36"]
+[gd_scene load_steps=17 format=4 uid="uid://dgoy1fogkmv36"]
 
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://c3aac5scf7mw4" path="res://cenas/teste/world.gd" id="1_ts74w"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bao6mpt78i3xq" path="res://cenas/npc/willames.tscn" id="11_ts74w"]
 [ext_resource type="PackedScene" uid="uid://3jgt87ej63vx" path="res://cenas/npc/isadora.tscn" id="12_1ubxq"]
 [ext_resource type="PackedScene" uid="uid://cmfevv2j06yii" path="res://cenas/npc/diretor.tscn" id="13_mt8um"]
+[ext_resource type="PackedScene" uid="uid://c865t2233rok3" path="res://cenas/interações/construcao.tscn" id="15_v0qvd"]
+[ext_resource type="AudioStream" uid="uid://c1qi7rm2mq2i6" path="res://sounds/When-I-Was-A-Boy_chosic.com_.ogg" id="16_fwl83"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_ts74w")
@@ -104,7 +106,7 @@ visible = false
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("2_ehqlt")]
-position = Vector2(-35, 461)
+position = Vector2(-35, 467)
 
 [node name="objetosTerreno" parent="Ysort" instance=ExtResource("5_jt30a")]
 texture_filter = 1
@@ -141,3 +143,23 @@ position = Vector2(-37, 455)
 
 [node name="sala_tutorial" type="Marker2D" parent="posicoes_entrada"]
 position = Vector2(1206, 455)
+
+[node name="Construcao" parent="." instance=ExtResource("15_v0qvd")]
+position = Vector2(1151, -13)
+
+[node name="Construcao" parent="Construcao" instance=ExtResource("15_v0qvd")]
+position = Vector2(94, 0)
+
+[node name="Construcao" parent="Construcao/Construcao" instance=ExtResource("15_v0qvd")]
+position = Vector2(97, 0)
+
+[node name="Construcao2" parent="." instance=ExtResource("15_v0qvd")]
+position = Vector2(-508, -14)
+
+[node name="Construcao3" parent="." instance=ExtResource("15_v0qvd")]
+position = Vector2(-400, -14)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_fwl83")
+volume_db = -15.847
+autoplay = true
