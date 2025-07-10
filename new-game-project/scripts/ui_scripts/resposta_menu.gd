@@ -29,7 +29,7 @@ func _ready():
 		inputs[i].text_changed.connect(_on_text_input.bind(i))
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("cofre"):
 		visible = true
 		get_tree().paused = true
 

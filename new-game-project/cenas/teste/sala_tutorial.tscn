@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://kqjvdlw2m74d"]
+[gd_scene load_steps=13 format=4 uid="uid://kqjvdlw2m74d"]
 
 [ext_resource type="Script" uid="uid://bmjnlrtc5e0eh" path="res://cenas/teste/sala_tutorial.gd" id="1_386iv"]
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_jx82w"]
@@ -7,8 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://bbohk67gdggsl" path="res://cenas/teste/porta.tscn" id="3_b0oyg"]
 [ext_resource type="PackedScene" uid="uid://1alig4m0bgfe" path="res://cenas/ui_cenas/pause_menu.tscn" id="4_o085d"]
 [ext_resource type="PackedScene" uid="uid://cwxfxbvq16bpt" path="res://cenas/enigmas/enigma_1.tscn" id="5_aicvf"]
+[ext_resource type="PackedScene" uid="uid://be6ui16d1pi1k" path="res://cenas/enigmas/cofre1.tscn" id="6_6x3py"]
 [ext_resource type="PackedScene" uid="uid://c2jeogadomjoo" path="res://cenas/enigmas/ui_papel.tscn" id="6_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://bp6sxjp2ti46e" path="res://cenas/interações/mensagem_ui.tscn" id="7_tfqeb"]
+[ext_resource type="PackedScene" uid="uid://b6swet5ftgsvp" path="res://cenas/ui_cenas/resposta_menu.tscn" id="7_trwv6"]
 [ext_resource type="PackedScene" uid="uid://dgr6d5yd7wclw" path="res://cenas/enigmas/papel_cofre.tscn" id="10_ty23l"]
 
 [node name="salaTutorial" type="Node2D"]
@@ -97,6 +99,13 @@ nome_saida = "sala_tutorial"
 [node name="papel_cofre" parent="." instance=ExtResource("10_ty23l")]
 position = Vector2(294, 55)
 rotation = 0.722926
+
+[node name="senha_e_cofre" type="Node2D" parent="."]
+
+[node name="cofre1" parent="senha_e_cofre" instance=ExtResource("6_6x3py")]
+position = Vector2(482, 46)
+
+[node name="resposta_menu" parent="senha_e_cofre" instance=ExtResource("7_trwv6")]
 
 [node name="player" parent="." instance=ExtResource("2_7qx2m")]
 position = Vector2(541, 71)
