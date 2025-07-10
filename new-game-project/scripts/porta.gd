@@ -9,7 +9,7 @@ extends Area2D
 var pode_entrar = false
 
 func _process(_delta):
-	if pode_entrar and Input.is_action_just_pressed("ui_accept"):
+	if pode_entrar and Input.is_action_just_pressed("interact"):
 		anim.play("abrir")
 		som.play()
 		await anim.animation_finished

@@ -7,7 +7,7 @@ extends Area2D
 @onready var label_3: Label = $CanvasLayer/Label3
 @onready var label_4: Label = $CanvasLayer/Label4
 @onready var imagem: TextureRect = $CanvasLayer/Imagem
-@onready var label_interacao: Label = $CanvasLayer/LabelInteracao
+
 
 
 var player_perto = false
@@ -28,6 +28,8 @@ func show_paper():
 	label_2.visible = true
 	label_3.visible = true
 	label_4.visible = true
+	'label_interacao.visible=true'
+
 	imagem.visible = true	
 
 func fechar():
@@ -36,9 +38,10 @@ func fechar():
 	label_2.visible = false
 	label_3.visible = false
 	label_4.visible = false
+	'label_interacao.visible=false'
 	imagem.visible = false	
 
-func _process(delta: float) -> void:
+func _process(delta):
 	if player_perto and Input.is_action_just_pressed("interact"):
 		show_paper()
 		
