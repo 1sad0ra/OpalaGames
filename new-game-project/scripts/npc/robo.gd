@@ -11,6 +11,10 @@ var player_perto = false
 var falando = false
 var pode_avancar = false
 var fala_index = 0
+var pode_interagir := false
+
+func ativar_interacao():
+	pode_interagir = true
 
 var falas = [
 	{"speaker": "Bipi", "text": "Olá, Boa noite!"},
@@ -29,7 +33,7 @@ func _ready():
 	label_interaçao.visible = false
 
 func _process(_delta):
-	if player_perto and not falando and Input.is_action_just_pressed("interact"):
+	if player_perto and pode_interagir and not falando and Input.is_action_just_pressed("interact"):
 		iniciar_dialogo()
 	elif falando and pode_avancar and Input.is_action_just_pressed("interact"):
 		proxima_fala()

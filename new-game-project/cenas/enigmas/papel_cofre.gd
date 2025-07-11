@@ -24,7 +24,7 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.name == "player":
 		label_interacao.text = " E "
-		label_interacao.visible = true
+		label_interacao.visible = false
 		player_perto = false
 
 func show_paper():
