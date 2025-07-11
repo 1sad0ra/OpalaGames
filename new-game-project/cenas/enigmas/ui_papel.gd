@@ -10,13 +10,13 @@ func _ready() -> void:
 
 func show_paper():
 	
-	var Imagem = preload("res://assets/Personagens/Paloma/new_atlas_texture.tres")
-
 	visible = true
 	imagem.visible = true
+	GameState.player_pode_mover = false
 	texto.visible= true
 
 func fechar():
 	visible = false
 	imagem.visible = false
+	GameState.player_pode_mover = true
 	texto.visible= false

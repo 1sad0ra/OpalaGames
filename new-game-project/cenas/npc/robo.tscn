@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl0fgo0cgp7to"]
+
+[ext_resource type="Script" uid="uid://sakgu2mc0hkc" path="res://scripts/npc/robo.gd" id="1_o1aei"]
+[ext_resource type="Texture2D" uid="uid://f4rmeehgdscl" path="res://assets/Personagens/Robo/robopixilart-sprite.png" id="2_6hxgg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viisq"]
+atlas = ExtResource("2_6hxgg")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppr7n"]
+atlas = ExtResource("2_6hxgg")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5eo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viisq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppr7n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgilk"]
+
+[node name="robo" type="CharacterBody2D"]
+script = ExtResource("1_o1aei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -14)
+sprite_frames = SubResource("SpriteFrames_c5eo2")
+frame_progress = 0.541151
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_dgilk")

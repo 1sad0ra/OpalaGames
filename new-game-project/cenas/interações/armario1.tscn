@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq53sbkde1vrg"]
+
+[ext_resource type="Script" uid="uid://bgxcai7j8cjnr" path="res://cenas/interações/armario.gd" id="1_ayeqo"]
+[ext_resource type="Texture2D" uid="uid://daa58nlencbiq" path="res://cenas/enigmas/imagens/estantedelivros.png" id="2_2uugu"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_jdlcl"]
+[ext_resource type="Texture2D" uid="uid://c2rwq1ffwvwsy" path="res://assets/Mapa/opalalivro/livro_esquerda.png" id="3_tc3vr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2buu"]
+size = Vector2(33, 55)
+
+[node name="Armario1" type="Area2D"]
+script = ExtResource("1_ayeqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_2uugu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.5, 3.5)
+shape = SubResource("RectangleShape2D_j2buu")
+
+[node name="Label_interacao" type="Label" parent="."]
+offset_left = 1.0
+offset_top = -31.0
+offset_right = 15.0
+offset_bottom = -18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jdlcl")
+theme_override_font_sizes/font_size = 10
+
+[node name="conteudo" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="conteudo"]
+visible = false
+offset_right = 641.0
+offset_bottom = 359.0
+
+[node name="Imagem" type="TextureRect" parent="conteudo"]
+visible = false
+texture_filter = 1
+offset_left = 69.0
+offset_top = -21.0
+offset_right = 550.0
+offset_bottom = 415.0
+texture = ExtResource("3_tc3vr")
+
+[node name="Label" type="Label" parent="conteudo"]
+visible = false
+offset_left = 330.0
+offset_top = 47.0
+offset_right = 491.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "14/04/2020 — Início do Projeto
+Hoje começamos o desenvolvimento
+ do ALFA-07. O aluno nº 7 está 
+motivado e cheio de ideias. A IA está 
+sendo montada linha por linha.
+ O laboratório está cheio de energia.
+Acredito que esse pode ser o grande
+ avanço."
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

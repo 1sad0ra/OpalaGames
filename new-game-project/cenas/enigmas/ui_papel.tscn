@@ -25,6 +25,7 @@ offset_bottom = 336.0
 texture = SubResource("CanvasTexture_pjep5")
 
 [node name="Texto" type="Label" parent="."]
+texture_filter = 1
 offset_left = 206.0
 offset_top = 34.0
 offset_right = 561.0
@@ -35,9 +36,9 @@ text = "Meu caro amigo,
 
 Sei o quanto foi difícil encerrar o projeto…
  mas não tivemos escolha.
-A situação no IFPI Pedro II saiu do nosso
- controle. Tranquei o Projeto A77B no cofre
- da diretoria — foi a única saída segura que 
+A situação saiu do nosso controle. 
+Tranquei o Projeto A77B no cofre
+da nesta sala — foi a única saída segura que 
 encontrei antes de tudo desmoronar.
 
 Caso um dia precise acessá-lo novamente,

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgr6d5yd7wclw"]
+[gd_scene load_steps=7 format=3 uid="uid://dgr6d5yd7wclw"]
 
 [ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="1_h4ro7"]
 [ext_resource type="Script" uid="uid://pq7j8qi8hwjh" path="res://cenas/enigmas/papel_cofre.gd" id="1_jkd61"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_4prbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4prbm"]
 radius = 4.12311
@@ -28,6 +29,18 @@ shape = SubResource("CircleShape2D_4prbm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6)
 shape = SubResource("CircleShape2D_jkd61")
+
+[node name="Label_interacao" type="Label" parent="."]
+texture_filter = 1
+offset_left = -2.0
+offset_top = -18.0
+offset_right = 15.0
+offset_bottom = -9.0
+rotation = 1.452
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4prbm")
+theme_override_font_sizes/font_size = 10
+vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

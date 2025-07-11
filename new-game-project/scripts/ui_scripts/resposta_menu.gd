@@ -7,6 +7,10 @@ extends CanvasLayer
 @onready var error_player = $ErrorPlayer
 @onready var correct_player = $CorrectPlayer
 
+
+@onready var cofre : Area2D= get_tree().get_root().get_node("salaTutorial/senha_e_cofre/cofre_1")
+
+
 @onready var inputs := [
 	$VBoxContainer/HBoxContainer/LineEdit1,
 	$VBoxContainer/HBoxContainer/LineEdit2,
@@ -29,7 +33,7 @@ func _ready():
 		inputs[i].text_changed.connect(_on_text_input.bind(i))
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("cofre"):
 		visible = true
 		get_tree().paused = true
 
@@ -42,12 +46,17 @@ func _on_confirmar_button_2_pressed():
 	for input in inputs:
 		resposta += input.text.strip_edges()
 
-	if resposta == "12b45":
+	if resposta == "14307":
 		print("Resposta Correta")
 		correct_player.play()  
 		for input in inputs:
 			input.add_theme_color_override("font_color", Color(0, 1, 0))
 		await get_tree().create_timer(0.5).timeout
+		
+		# Aqui avisa o cofre para destravar
+		cofre.destravar_cofre()
+
+		
 		get_tree().paused = false
 		queue_free()
 	else:
