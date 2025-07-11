@@ -17,7 +17,7 @@ func _on_button_hover():
 func _on_jogar_button_1_pressed():
 	click_player.play()
 	await get_tree().create_timer(0.2).timeout
-	get_tree().change_scene_to_file("res://cenas/teste/world.tscn")
+	get_tree().change_scene_to_file("res://cenas/teste/sala_01l.tscn")
 
 func _on_sair_button_3_pressed():
 	click_player.play()
