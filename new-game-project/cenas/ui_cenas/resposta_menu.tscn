@@ -73,7 +73,6 @@ size_flags_horizontal = 6
 layout_mode = 2
 
 [node name="LineEdit1" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -88,7 +87,6 @@ alignment = 1
 max_length = 1
 
 [node name="LineEdit2" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -103,7 +101,6 @@ alignment = 1
 max_length = 1
 
 [node name="LineEdit3" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -118,7 +115,6 @@ alignment = 1
 max_length = 1
 
 [node name="LineEdit4" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -133,7 +129,6 @@ alignment = 1
 max_length = 1
 
 [node name="LineEdit5" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -148,7 +143,6 @@ alignment = 1
 max_length = 1
 
 [node name="Voltar_Button1" type="Button" parent="." groups=["menu_buttons"]]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 offset_left = 23.0
 offset_top = 22.0
@@ -167,7 +161,6 @@ shortcut = SubResource("Shortcut_280wa")
 text = "Voltar"
 
 [node name="Confirmar_Button2" type="Button" parent="." groups=["menu_buttons"]]
-visible = false
 custom_minimum_size = Vector2(40, 40)
 offset_left = 418.0
 offset_top = 234.0

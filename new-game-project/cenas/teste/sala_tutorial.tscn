@@ -108,6 +108,14 @@ position = Vector2(258, 40)
 [node name="Armario1" parent="." instance=ExtResource("13_ik8u1")]
 position = Vector2(224, 40)
 
+[node name="fase1" type="Node2D" parent="."]
+
+[node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
+visible = false
+
+[node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
+position = Vector2(456, 105)
+
 [node name="senha_e_cofre" type="Node2D" parent="."]
 
 [node name="cofre_1" parent="senha_e_cofre" instance=ExtResource("6_6x3py")]
@@ -123,14 +131,6 @@ visible = false
 
 [node name="pause_menu" parent="." instance=ExtResource("4_o085d")]
 visible = false
-
-[node name="fase1" type="Node2D" parent="."]
-
-[node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
-visible = false
-
-[node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
-position = Vector2(456, 105)
 
 [node name="posicoes_entrada" type="Node2D" parent="."]
 

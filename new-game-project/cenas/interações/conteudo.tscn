@@ -46,9 +46,8 @@ theme_override_font_sizes/font_size = 10
 text = " Antes de iniciar sua jornada, memorize o essencial:
 W, A, S, D — Para se mover pelo IFPI
 
-E — Interagir com objetos e pessoas
-
-Enter — Abrir portas
+E — Interagir com objetos, pessoas
+e as portas
 
 Espaço — Sair de interações"
 vertical_alignment = 1

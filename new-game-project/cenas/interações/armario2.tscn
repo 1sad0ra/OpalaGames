@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk72b4ihgtu5u"]
+[gd_scene load_steps=6 format=3 uid="uid://dk72b4ihgtu5u"]
 
 [ext_resource type="Script" uid="uid://bgxcai7j8cjnr" path="res://cenas/interações/armario.gd" id="1_i05cx"]
 [ext_resource type="Texture2D" uid="uid://daa58nlencbiq" path="res://cenas/enigmas/imagens/estantedelivros.png" id="2_sanhi"]
 [ext_resource type="Texture2D" uid="uid://c2rwq1ffwvwsy" path="res://assets/Mapa/opalalivro/livro_esquerda.png" id="3_gorfp"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_sanhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2buu"]
 size = Vector2(33, 55)
@@ -18,6 +19,15 @@ texture = ExtResource("2_sanhi")
 texture_filter = 1
 position = Vector2(-1.5, 3.5)
 shape = SubResource("RectangleShape2D_j2buu")
+
+[node name="Label_interacao" type="Label" parent="."]
+offset_left = 1.0
+offset_top = -34.0
+offset_right = 30.0
+offset_bottom = -11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_sanhi")
+theme_override_font_sizes/font_size = 10
 
 [node name="conteudo" type="CanvasLayer" parent="."]
 
@@ -39,8 +49,8 @@ texture = ExtResource("3_gorfp")
 visible = false
 offset_left = 330.0
 offset_top = 47.0
-offset_right = 491.0
-offset_bottom = 172.0
+offset_right = 512.0
+offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 9
 text = "14/04/2025 — Fim do projeto
