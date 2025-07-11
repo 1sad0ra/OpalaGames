@@ -17,34 +17,18 @@ texture = ExtResource("1_h66xb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdaf1"]
 texture = ExtResource("2_2yk73")
+17:8/size_in_atlas = Vector2i(2, 3)
 17:8/0 = 0
-18:8/0 = 0
-17:7/0 = 0
-18:7/0 = 0
-17:9/0 = 0
-17:10/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
+17:8/0/texture_origin = Vector2i(0, 10)
+8:8/size_in_atlas = Vector2i(3, 2)
 8:8/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-10:8/0 = 0
-9:8/0 = 0
-19:8/0 = 0
-19:9/0 = 0
-19:10/0 = 0
+8:8/0/texture_origin = Vector2i(0, 10)
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22.4823, -2.69788, -21.4032, -5.93534, 20.324, -4.31661, 21.2233, 4.49647, -21.0435, 5.03604)
 
 [sub_resource type="TileSet" id="TileSet_xdaf1"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2yk73")
-sources/1 = SubResource("TileSetAtlasSource_xdaf1")
+sources/2 = SubResource("TileSetAtlasSource_xdaf1")
 
 [node name="objetosTerreno" type="TileMapLayer"]
 y_sort_enabled = true
