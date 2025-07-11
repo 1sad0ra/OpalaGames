@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player = $player
 @onready var posicoes_entrada = $posicoes_entrada
+@onready var mensagem_tutorial = $mensagem_tutorial  
 
 func _ready():
 	await get_tree().process_frame
@@ -17,3 +18,6 @@ func _ready():
 				camera.reset_smoothing()
 				camera.force_update_scroll()
 		GameState.porta_saida = ""
+
+
+	mensagem_tutorial.mostrar_mensagem()

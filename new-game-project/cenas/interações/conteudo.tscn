@@ -37,18 +37,18 @@ autowrap_mode = 2
 
 [node name="turorial" type="Label" parent="."]
 texture_filter = 1
-offset_left = 78.0
-offset_top = 108.0
-offset_right = 292.0
-offset_bottom = 207.0
+offset_left = 81.0
+offset_top = 98.0
+offset_right = 295.0
+offset_bottom = 265.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = " Antes de iniciar sua jornada, memorize o essencial:
-W, A, S, D — Para se mover pelo IFPI
+text = "Sei que acabou de chegar, mas peço-lhe por favor que não deixe que os alunos fiquem nos corredores. 
 
-E — Interagir com objetos, pessoas
-e as portas
+Caso chegue não encontre nenhum aluno na sala, vá atrás deles.
 
-Espaço — Sair de interações"
+Aproveite para explorar o Campus.
+
+At.te: Coordenador"
 vertical_alignment = 1
 autowrap_mode = 2
