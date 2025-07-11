@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cay8u8k71gyss"]
+
+[ext_resource type="Texture2D" uid="uid://f4rmeehgdscl" path="res://assets/Personagens/Robo/robopixilart-sprite.png" id="1_xekyf"]
+
+[resource]
+atlas = ExtResource("1_xekyf")
+region = Rect2(192, 0, 32, 32)

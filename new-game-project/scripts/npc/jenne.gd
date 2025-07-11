@@ -22,10 +22,12 @@ var fala_index = 0
 
 # Falas do diálogo
 var falas = [
-	{"speaker": "Jennie", "text": "Olá! Ouvi dizer que você é o novo professor. Espero que goste do campus. Ultimamente, têm chegado várias tecnologias novas por aqui, para melhorar a experiência dos alunos."},
+	{"speaker": "Jennie", "text": "Olá! Ouvi dizer que você é o novo professor. Espero que goste do campus."},
+	{"speaker": "Player", "text": "Olá, Obrigado!"},
+	{"speaker": "Jennie", "text": "Ultimamente, têm chegado várias tecnologias novas por aqui, para melhorar a experiência dos alunos."},
 	{"speaker": "Jennie", "text": "Este módulo vai ser interessante. Por algum motivo, a direção se livrou dos equipamentos antigos… Uma pena."},
-	{"speaker": "Jennie", "text": "Já me disseram que havia até IAs altamente desenvolvidas, mas aparentemente algo deu errado durante os testes, e jogaram tudo fora. Loucura, né? Bom, chega de fofoca. Vamos pra aula!"},
-	{"speaker": "Player", "text": "Tá bom."},
+	{"speaker": "Jennie", "text": "Já me disseram que havia até IAs altamente desenvolvidas, mas aparentemente algo deu errado durante os testes,"},
+	{"speaker": "Jennie", "text": " e jogaram tudo fora. Loucura, né? Bom, chega de fofoca. Vamos pra aula!"}
 ]
 
 # Texturas dos personagens
@@ -108,10 +110,10 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	pode_avancar = true
 
 func encerrar_dialogo():

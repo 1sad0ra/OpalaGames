@@ -24,8 +24,22 @@ var fala_index = 0
 
 # Falas
 var falas = [
-	{"speaker": "Cordenador", "text": "Alunos nos corredores!"},
-	{"speaker": "Player", "text": "ta bom"}
+	{"speaker": "Cordenador", "text": "Conseguiu encontrar todos os alunos?"},
+	{"speaker": "Player", "text": "Ainda estou trabalhando nisso..."},
+	{"speaker": "Cordenador", "text": " As coisas estão agitadas... Muita papelada, sabe?"},
+	{"speaker": "Cordenador", "text": "É bem estressante ter que organizar tudo..."},
+	{"speaker": "Player", "text": "Por que não contratam mais pessoas?"},
+	{"speaker": "Cordenador", "text": "Eles não podem... não devem."},
+	{"speaker": "Player", "text": "O que quer dizer com isso?"},
+	{"speaker": "Cordenador", "text": "Nada, meu jovem. Eles podem confiar em mim. Me deram um trabalho, e eu vou cumprir."},
+	{"speaker": "Player", "text": " O senhor é bem esforçado."},
+	{"speaker": "Cordenador", "text": " Meu cargo não exige menos que isso: dedicação e força."},
+	{"speaker": "Player", "text": "Ser coordenador deve ser uma loucura mesmo..."},
+
+
+
+
+
 ]
 
 # Retratos
@@ -106,10 +120,10 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	pode_avancar = true
 
 

@@ -22,8 +22,22 @@ var fala_index = 0
 
 # Falas
 var falas = [
-	{"speaker": "Paloma", "text": "Boa Noite!"},
-	{"speaker": "Player", "text": "Boa Noite!"}
+	{"speaker": "Paloma", "text": "Ei, oi! Então é você o novo professor? Já tava sabendo que alguém novo ia chegar."},
+	{"speaker": "Player", "text": "Sou eu, sim. Impressionante… todo mundo já sabe antes mesmo de eu me apresentar."},
+	{"speaker": "Paloma", "text": "Ah, aqui a fofoca corre mais rápido que a internet do campus."},
+	{"speaker": "Paloma", "text": "Mas já que estamos no clima de fofoca,"},
+	{"speaker": "Paloma", "text": "deixa eu te contar uma coisa… acabei de sair do laboratório novo."},
+	{"speaker": "Paloma", "text": "Colocaram uns PCs novinhos, tudo brilhando. Até que ficou bonito, mas sinceramente?"},
+	{"speaker": "Paloma", "text": "Achei um desperdício jogarem fora todos os equipamentos antigos. Ainda davam pro gasto..."},
+	{"speaker": "Paloma", "text": "Reformaram quase tudo… quase. Tem um lugar que continua fechado: o Laboratório 19. Trancado há meses."},
+	{"speaker": "Paloma", "text": "Ninguém entra. Tá lá… jogado, esquecido."},
+	{"speaker": "Player", "text": "Sério? Mas por quê?"},
+	{"speaker": "Paloma", "text": "Ninguém fala. Só sei que virou assunto proibido. E, olha… às vezes, quando eu passo perto, dá pra ouvir uns barulhos vindo lá de dentro."},
+	{"speaker": "Paloma", "text": "Tipo... coisa se mexendo."},
+	{"speaker": "Player", "text":"Nossa, que estranho…"},
+	{"speaker": "Paloma", "text":"Pois é. Meio sinistro. Mas dizem que ainda tem muita coisa guardada lá."},
+	{"speaker": "Paloma", "text":"Equipamento, arquivos, sei lá… Se você tiver coragem, talvez valha a pena dar uma olhada."}
+
 ]
 
 # Retratos
@@ -107,10 +121,10 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	pode_avancar = true
 
 func encerrar_dialogo():
