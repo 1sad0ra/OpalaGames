@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccgfxyaikb2v"]
+
+[ext_resource type="Script" uid="uid://oa6f4myuffvn" path="res://cenas/enigmas/papel_binario.gd" id="1_ravdu"]
+[ext_resource type="Texture2D" uid="uid://qi37doolpk7h" path="res://assets/Mapa/tilesetok01.png" id="2_ivuhy"]
+[ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_ra1b3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4prbm"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jkd61"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4prbm"]
+
+[node name="papel_binario" type="Area2D"]
+script = ExtResource("1_ravdu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6)
+texture = ExtResource("2_ivuhy")
+region_enabled = true
+region_rect = Rect2(178.897, 176.096, 10.8814, 14.7988)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_4prbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_jkd61")
+
+[node name="Label_interacao" type="Label" parent="."]
+texture_filter = 1
+offset_left = -2.0
+offset_top = -18.0
+offset_right = 15.0
+offset_bottom = -9.0
+rotation = 1.452
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ra1b3")
+theme_override_font_sizes/font_size = 10
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+offset_top = -2.0
+offset_right = 641.0
+offset_bottom = 357.0
+
+[node name="Imagem" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -173.5
+offset_right = 138.0
+offset_bottom = 173.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_4prbm")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 187.0
+offset_top = 13.0
+offset_right = 450.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Assunto: Conversão de números binários para decimal"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 185.0
+offset_top = 35.0
+offset_right = 1483.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "O sistema binário é formado apenas por 0 e 1, e é muito
+ usado em computadores. Para converter um número
+ binário em decimal, multiplicamos cada dígito pela 
+potência de 2 correspondente à sua posição 
+(da direita para a esquerda)."
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 187.0
+offset_top = 128.0
+offset_right = 482.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Exemplo:
+Vamos converter o binário 11110 para decimal:
+
+Copiar
+Editar
+1×2⁴ = 16  
+1×2³ = 8  
+1×2² = 4  
+1×2¹ = 2  
+0×2⁰ = 0"
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 185.0
+offset_top = 250.0
+offset_right = 480.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Total: 16 + 8 + 4 + 2 = 30
+➡️ 11110 em binário = 30 em decimal"
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

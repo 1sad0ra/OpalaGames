@@ -17,6 +17,7 @@ func destravar_cofre():
 		cofre_trancado = false
 		animation_player.play("abrir")  #  animação de abrir o cofre
 		npc.visible = true  # Deixa o NPC visível
+		npc.call_deferred("ativar_interacao")
 		npc.set_process(true)  # Ativa processamento do NPC, para ele se mover
 
 
