@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8m80l2hghx8v" path="res://assets/Mapa/salatilesets.png" id="4_goyqa"]
 [ext_resource type="Texture2D" uid="uid://b8e32scsmcvqk" path="res://assets/Mapa/mapatileset.png" id="5_l62hv"]
 [ext_resource type="Texture2D" uid="uid://d0ac3hbfjsjb5" path="res://assets/Mapa/mapatileset1.png" id="6_l62hv"]
-[ext_resource type="Texture2D" uid="uid://dwda3wbhxoqng" path="res://assets/Mapa/placa.png" id="7_lbp1n"]
+[ext_resource type="Texture2D" uid="uid://dp0q2hrfbqhmt" path="res://assets/Mapa/placa.png" id="7_lbp1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g8j01"]
 texture = ExtResource("1_w0uu4")

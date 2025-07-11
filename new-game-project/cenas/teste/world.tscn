@@ -96,7 +96,7 @@ nome_saida = "entrada_sala_01"
 
 [node name="porta2" parent="." instance=ExtResource("3_otrou")]
 position = Vector2(1206, 447)
-destino = "res://cenas/teste/sala_tutorial.tscn"
+destino = "C:/Users/USER/Documents/GitHub/OpalaGames/new-game-project/cenas/teste/sala_tutorial.tscn"
 nome_saida = "entrada_sala_tutorial"
 
 [node name="pause_menu" parent="." instance=ExtResource("4_favmu")]
