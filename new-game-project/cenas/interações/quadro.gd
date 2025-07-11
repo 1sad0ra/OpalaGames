@@ -38,7 +38,7 @@ func fechar():
 	
 	imagem.visible = false	
 #função para a interação com as teclas
-func _process(delta: float) -> void:
+func _process(delta):
 	if player_perto and Input.is_action_just_pressed("interact"):
 		show_paper()
 		
