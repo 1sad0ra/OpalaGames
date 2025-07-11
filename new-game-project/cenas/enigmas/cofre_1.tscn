@@ -91,7 +91,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 11)
+position = Vector2(3, 10)
 shape = SubResource("CircleShape2D_6fe17")
 
 [node name="Label_interacao" type="Label" parent="."]
@@ -106,7 +106,9 @@ theme_override_font_sizes/font_size = 10
 
 [node name="robo" parent="." instance=ExtResource("4_b04w5")]
 texture_filter = 1
+
 position = Vector2(9, 30)
+Stashed changes
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
