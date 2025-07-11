@@ -1,13 +1,12 @@
 extends CharacterBody2D
 
-@onready var animated_sprite_2d = $AnimatedSprite2D
-
-# Referências para os elementos de UI
 @onready var label_interacao = $LabelInteracao
-@onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
-@onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
 @onready var nomelabel: Label = $CanvasLayer/nomelabel
+@onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
+@onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
+@onready var som_fala = $SomFala
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 # Configurações de movimento
 @export var velocidade: float = 40.0
@@ -132,13 +131,16 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
+	som_fala.play()
 	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
 		await get_tree().create_timer(0.001).timeout
+	som_fala.stop()
 	pode_avancar = true
-
+	
 func encerrar_dialogo():
+	som_fala.stop()
 	falando = false
 	pode_avancar = false
 	texto_dialogo.visible = false
@@ -146,6 +148,5 @@ func encerrar_dialogo():
 	nomelabel.visible = false
 	retrato.visible = false
 	fala_index = 0
-
 	GameState.player_pode_mover = true
 	andando = true

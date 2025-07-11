@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://kqjvdlw2m74d"]
+[gd_scene load_steps=16 format=4 uid="uid://kqjvdlw2m74d"]
 
 [ext_resource type="Script" uid="uid://bmjnlrtc5e0eh" path="res://cenas/teste/sala_tutorial.gd" id="1_386iv"]
 [ext_resource type="TileSet" uid="uid://dlfekob750gh8" path="res://TileSets/game_tile_sets.tres" id="1_jx82w"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dgr6d5yd7wclw" path="res://cenas/enigmas/papel_cofre.tscn" id="10_ty23l"]
 [ext_resource type="PackedScene" uid="uid://dq53sbkde1vrg" path="res://cenas/interações/armario1.tscn" id="13_ik8u1"]
 [ext_resource type="PackedScene" uid="uid://dk72b4ihgtu5u" path="res://cenas/interações/armario2.tscn" id="14_oy1fx"]
+[ext_resource type="AudioStream" uid="uid://xj5xsqc0napx" path="res://sounds/frightening-place-109766.ogg" id="15_oy1fx"]
 
 [node name="salaTutorial" type="Node2D"]
 script = ExtResource("1_386iv")
@@ -108,12 +109,21 @@ position = Vector2(258, 40)
 [node name="Armario1" parent="." instance=ExtResource("13_ik8u1")]
 position = Vector2(224, 40)
 
+[node name="fase1" type="Node2D" parent="."]
+
+[node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
+visible = false
+
+[node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
+position = Vector2(456, 105)
+
 [node name="senha_e_cofre" type="Node2D" parent="."]
 
 [node name="cofre_1" parent="senha_e_cofre" instance=ExtResource("6_6x3py")]
 position = Vector2(331, 36)
 
 [node name="resposta_menu" parent="senha_e_cofre" instance=ExtResource("7_trwv6")]
+visible = false
 
 [node name="player" parent="." instance=ExtResource("2_7qx2m")]
 position = Vector2(541, 71)
@@ -124,15 +134,11 @@ visible = false
 [node name="pause_menu" parent="." instance=ExtResource("4_o085d")]
 visible = false
 
-[node name="fase1" type="Node2D" parent="."]
-
-[node name="ui_papel" parent="fase1" instance=ExtResource("6_tfqeb")]
-visible = false
-
-[node name="enigma1" parent="fase1" instance=ExtResource("5_aicvf")]
-position = Vector2(456, 105)
-
 [node name="posicoes_entrada" type="Node2D" parent="."]
 
 [node name="entrada_sala_tutorial" type="Marker2D" parent="posicoes_entrada"]
 position = Vector2(541, 56)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_oy1fx")
+autoplay = true

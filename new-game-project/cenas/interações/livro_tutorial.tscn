@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://do43ctveiyn4a"]
+[gd_scene load_steps=5 format=3 uid="uid://do43ctveiyn4a"]
 
 [ext_resource type="Script" uid="uid://dif1i6341j6yw" path="res://cenas/interações/livro_tutorial.gd" id="1_eqwld"]
 [ext_resource type="Texture2D" uid="uid://b2bqbai2oteo5" path="res://assets/Mapa/opalalivro/oplalalivro.png" id="2_n5goa"]
+[ext_resource type="AudioStream" uid="uid://drowsrs0bl38d" path="res://sounds/somfala.wav" id="3_02wmt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o4k7l"]
 radius = 14.3178
@@ -27,6 +28,9 @@ offset_top = -34.0
 offset_right = 41.0
 offset_bottom = -11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="SomFala" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_02wmt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 @onready var label_interacao = $LabelInteracao
-@onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
-@onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
-@onready var nomelabel: Label = $CanvasLayer/nomelabel
+@onready var nome_label: Label = $CanvasLayer/nomelabel
+@onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
+@onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
+@onready var som_fala = $SomFala
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-# Configurações de movimento
+
 @export var velocidade: float = 40.0
 @export var distancia_maxima: float = 200.0
 @export var direcao: Vector2 = Vector2.RIGHT  # Pode ser RIGHT, LEFT, etc.
@@ -91,7 +92,7 @@ func iniciar_dialogo():
 	caixa_dialogo.visible = true
 	texto_dialogo.visible = true
 	retrato.visible = true
-	nomelabel.visible = true
+	nome_label.visible = true
 	fala_index = 0
 
 	GameState.player_pode_mover = false
@@ -102,7 +103,7 @@ func proxima_fala():
 		pode_avancar = false
 		var fala = falas[fala_index]
 		fala_index += 1
-		nomelabel.text = fala["speaker"]
+		nome_label.text = fala["speaker"]
 		texto_dialogo.text = ""
 		retrato.texture = retratos.get(fala["speaker"], null)
 		mostrar_texto_com_efeito(fala["text"])
@@ -110,20 +111,22 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
+	som_fala.play()
 	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
 		await get_tree().create_timer(0.001).timeout
+	som_fala.stop()
 	pode_avancar = true
 
 func encerrar_dialogo():
+	som_fala.stop()
 	falando = false
 	pode_avancar = false
 	texto_dialogo.visible = false
 	caixa_dialogo.visible = false
-	nomelabel.visible = false
+	nome_label.visible = false
 	retrato.visible = false
 	fala_index = 0
-
 	GameState.player_pode_mover = true
 	andando = true

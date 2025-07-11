@@ -23,7 +23,7 @@ func _on_body_exited(body):
 		label_interacao.visible = false
 		player_near = false
 	
-
+#função para as teclas
 func _process(_delta):
 	if player_near and Input.is_action_just_pressed("interact"):
 		papel.show_paper()

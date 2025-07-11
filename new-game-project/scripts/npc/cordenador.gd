@@ -5,16 +5,13 @@ extends CharacterBody2D
 @onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
 @onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
-
+@onready var som_fala = $SomFala
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-# Movimento
 @export var velocidade: float = 40.0
 @export var distancia_maxima: float = 120.0
-@export var direcao: Vector2 = Vector2.DOWN  # Começa andando para baixo
+@export var direcao: Vector2 = Vector2.DOWN
 
-
-# Estados
 var posicao_inicial
 var andando = true
 var player_perto = false
@@ -22,7 +19,6 @@ var falando = false
 var pode_avancar = false
 var fala_index = 0
 
-# Falas
 var falas = [
 	{"speaker": "Cordenador", "text": "Conseguiu encontrar todos os alunos?"},
 	{"speaker": "Player", "text": "Ainda estou trabalhando nisso..."},
@@ -42,8 +38,7 @@ var falas = [
 
 ]
 
-# Retratos
-var retratos= {
+var retratos = {
 	"Cordenador": preload("res://assets/Personagens/Coordenador/new_atlas_texture.tres"),
 	"Player": preload("res://assets/Personagens/Player_Socram/new_atlas_texture.tres")
 }
@@ -66,12 +61,11 @@ func _process(delta):
 func movimentar_npc(delta):
 	var deslocamento = global_position - posicao_inicial
 	if deslocamento.length() >= distancia_maxima:
-		direcao *= -1  # Inverte direção (cima ↔ baixo)
+		direcao *= -1
 
 	velocity = direcao.normalized() * velocidade
 	move_and_slide()
 
-	# Animação de acordo com a direção
 	if direcao.y > 0:
 		animated_sprite_2d.play("andar_baixo")
 	elif direcao.y < 0:
@@ -120,14 +114,16 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
+	som_fala.play()
 	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
 		await get_tree().create_timer(0.001).timeout
+	som_fala.stop()
 	pode_avancar = true
 
-
 func encerrar_dialogo():
+	som_fala.stop()
 	falando = false
 	pode_avancar = false
 	texto_dialogo.visible = false

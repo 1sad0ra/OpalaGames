@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://dy0fvin8fma8x"]
+[gd_scene load_steps=21 format=3 uid="uid://dy0fvin8fma8x"]
 
 [ext_resource type="Script" uid="uid://b3m5acuc2t2vx" path="res://scripts/npc/paloma.gd" id="1_b4xfa"]
 [ext_resource type="Texture2D" uid="uid://dwvnfophqajy2" path="res://assets/Personagens/Paloma/new_atlas_texture.tres" id="2_hrg1j"]
 [ext_resource type="Texture2D" uid="uid://dwlelquy1asq7" path="res://assets/Personagens/Paloma/Paloma_pixilart-sprite.png" id="3_52fcy"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="4_6t5yo"]
+[ext_resource type="AudioStream" uid="uid://drowsrs0bl38d" path="res://sounds/somfala.wav" id="5_aasyt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5yo"]
 atlas = ExtResource("3_52fcy")
@@ -171,6 +172,9 @@ horizontal_alignment = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2.5, 0.5)
 shape = SubResource("RectangleShape2D_6t5yo")
+
+[node name="SomFala" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_aasyt")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

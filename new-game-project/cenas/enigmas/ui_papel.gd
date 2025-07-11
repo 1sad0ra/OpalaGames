@@ -12,9 +12,11 @@ func show_paper():
 	
 	visible = true
 	imagem.visible = true
+	GameState.player_pode_mover = false
 	texto.visible= true
 
 func fechar():
 	visible = false
 	imagem.visible = false
+	GameState.player_pode_mover = true
 	texto.visible= false

@@ -1,29 +1,25 @@
 extends CharacterBody2D
 
-# Referência para o rótulo de interação ("E")
 @onready var label_interacao = $LabelInteracao
-
-# Elementos da interface de diálogo
-@onready var caixa_dialogo: Label = $CanvasLayer/CaixaDialogo
-@onready var texto_dialogo: Label = $CanvasLayer/TextoDialogo
 @onready var nomelabel: Label = $CanvasLayer/nomelabel
+@onready var caixa_dialogo = $CanvasLayer/CaixaDialogo
+@onready var texto_dialogo = $CanvasLayer/TextoDialogo
 @onready var retrato: TextureRect = $CanvasLayer/Retrato
-
-# Sprite animado do personagem
+@onready var som_fala = $SomFala
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-# --- CONFIGURAÇÕES DE MOVIMENTO ---
-@export var velocidade: float = 40.0                     # Velocidade de movimento
-@export var distancia_maxima: float = 120.0              # Distância máxima de movimento (reduzido para andar menos)
-@export var direcao: Vector2 = Vector2.UP                # Direção inicial (para cima)
 
-# --- VARIÁVEIS DE ESTADO ---
-var posicao_inicial                                       # Posição inicial do NPC
-var andando = true                                        # Define se está se movendo
-var player_perto = false                                  # Se o player está na área de interação
-var falando = false                                       # Se está em um diálogo
-var pode_avancar = false                                  # Se pode avançar o diálogo
-var fala_index = 0                                        # Índice da fala atual
+@export var velocidade: float = 40.0                     
+@export var distancia_maxima: float = 120.0             
+@export var direcao: Vector2 = Vector2.UP                
+
+
+var posicao_inicial                                      
+var andando = true                                        
+var player_perto = false                                
+var falando = false                                       
+var pode_avancar = false                        
+var fala_index = 0                                      
 
 
 var falas = [
@@ -46,33 +42,33 @@ func _ready():
 	caixa_dialogo.visible = false
 	texto_dialogo.visible = false
 	label_interacao.visible = false
-	posicao_inicial = global_position        # Salva posição inicial para limitar o movimento
+	posicao_inicial = global_position        
 
-# --- PROCESSO A CADA FRAME ---
+
 func _process(delta):
-	# Se estiver andando, chama a função de movimentar
+
 	if andando:
 		movimentar_npc(delta)
 
-	# Se o player estiver perto e o diálogo ainda não começou
+
 	if player_perto and not falando and Input.is_action_just_pressed("interact"):
 		iniciar_dialogo()
 	elif falando and pode_avancar and Input.is_action_just_pressed("interact"):
 		proxima_fala()
 
-# --- MOVIMENTO DO NPC ---
+
 func movimentar_npc(delta):
 	var deslocamento = global_position - posicao_inicial
 
-	# Se ele já andou a distância máxima, inverte a direção
+	
 	if deslocamento.length() >= distancia_maxima:
 		direcao *= -1
 
-	# Aplica movimento
+	
 	velocity = direcao * velocidade
 	move_and_slide()
 
-	# Toca animação conforme a direção
+
 	if direcao.y < 0:
 		animated_sprite_2d.play("andar_cima")
 	elif direcao.y > 0:
@@ -80,18 +76,18 @@ func movimentar_npc(delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-# --- QUANDO O PLAYER ENTRA NA ÁREA ---
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		player_perto = true
-		andando = false                  # Para de andar
-		velocity = Vector2.ZERO         # Zera a velocidade
-		animated_sprite_2d.play("idle") # Para animação
+		andando = false                  
+		velocity = Vector2.ZERO         
+		animated_sprite_2d.play("idle") 
 		label_interacao.text = " E "
 		label_interacao.visible = true
 		label_interacao.position = Vector2(-label_interacao.size.x / 2, -40)
 
-# --- QUANDO O PLAYER SAI DA ÁREA ---
+
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "player":
 		player_perto = false
@@ -128,14 +124,16 @@ func proxima_fala():
 
 
 func mostrar_texto_com_efeito(texto):
-	await get_tree().create_timer(0.05).timeout
+	som_fala.play()
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
+	som_fala.stop()
 	pode_avancar = true
 
-
 func encerrar_dialogo():
+	som_fala.stop()
 	falando = false
 	pode_avancar = false
 	texto_dialogo.visible = false
