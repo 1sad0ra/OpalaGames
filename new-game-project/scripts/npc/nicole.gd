@@ -24,9 +24,10 @@ var fala_index = 0
 
 var falas = [
 	{"speaker": "Nicole", "text": "Ah, olá!"},
-	{"speaker": "Nicole", "text": "O senhor deve ser o professor substituto. Ouvi dizer que não teríamos aula, pois estavam com dificuldade para encontrar um novo professor."},
+	{"speaker": "Player", "text": "Boa noite!"},
+	{"speaker": "Nicole", "text": "O senhor deve ser o professor substituto."},
+	{"speaker": "Nicole", "text": "Ouvi dizer que não teríamos aula, pois estavam com dificuldade para encontrar um novo professor."},
 	{"speaker": "Nicole", "text": "Pois bem, estou indo para a sala."},
-	{"speaker": "Player", "text": "Tá bom."}
 ]
 
 
@@ -111,11 +112,12 @@ func proxima_fala():
 		encerrar_dialogo()
 
 func mostrar_texto_com_efeito(texto):
+
 	som_fala.play()
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	som_fala.stop()
 	pode_avancar = true
 

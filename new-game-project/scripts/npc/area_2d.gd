@@ -125,7 +125,7 @@ func proxima_fala():
 
 func mostrar_texto_com_efeito(texto):
 	som_fala.play()
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
 		await get_tree().create_timer(0.001).timeout

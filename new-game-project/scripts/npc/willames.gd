@@ -23,13 +23,33 @@ var fala_index = 0
 
 # Falas do diálogo
 var falas = [
-	{"speaker": "Willames", "text": "Boa noite!"},
-	{"speaker": "Player", "text": "Boa noite!"}
+  {"speaker": "Willyams", "text": "Olá, boa noite."},
+  {"speaker": "Willyams", "text": "Você deve ser o novo professor, né?"},
+  {"speaker": "Willyams", "text": "Bem-vindo ao Instituto."},
+  {"speaker": "Player","text": "Boa noite. Sim, sou eu mesmo."},
+  {"speaker": "Player","text": "Ainda me acostumando com o lugar."},
+  {"speaker": "Willyams", "text": "Ah, isso é normal no começo."},
+  {"speaker": "Willyams", "text": "Cada canto desse prédio tem sua história..."},
+  {"speaker": "Willyams", "text": "Mas já vou te adiantando: ser professor aqui exige paciência."},
+  {"speaker": "Player","text": "Imagino. Parece um trabalho desafiador."},
+  {"speaker": "Willyams", "text": "É... tem dias que a gente explica, repete, desenha..."},
+  {"speaker": "Willyams", "text": "E mesmo assim parece que nada entra."},
+  {"speaker": "Willyams", "text": "Mas, de vez em quando, um aluno entende, se interessa..."},
+  {"speaker": "Willyams", "text": "E aí vale a pena."},
+  {"speaker": "Player","text": "Deve ser um alívio nesses momentos."},
+  {"speaker": "Willyams", "text": "Com certeza."},
+  {"speaker": "Willyams", "text": "Só que... ultimamente, tudo anda meio estranho por aqui."},
+  {"speaker": "Willyams", "text": "Difícil de explicar. Uma sensação esquisita no ar."},
+  {"speaker": "Player","text": "Estranha como?"},
+  {"speaker": "Willyams", "text": "Não sei..."},
+  {"speaker": "Willyams", "text": "Como se o colégio estivesse guardando alguma coisa."},
+  {"speaker": "Willyams","text": "Mas enfim, você vai perceber com o tempo."}
 ]
+
 
 # Texturas dos personagens
 var retratos = {
-	"Willames": preload("res://assets/Personagens/Willames/new_atlas_texture.tres"),
+	"Willyams":preload("res://assets/Personagens/Willames/new_atlas_texture.tres"),
 	"Player": preload("res://assets/Personagens/Player_Socram/new_atlas_texture.tres")
 }
 
@@ -112,10 +132,10 @@ func proxima_fala():
 
 func mostrar_texto_com_efeito(texto):
 	som_fala.play()
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	som_fala.stop()
 	pode_avancar = true
 	

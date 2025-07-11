@@ -13,8 +13,21 @@ var pode_avancar = false
 var fala_index = 0
 
 var falas = [
-	{"speaker": "Diretor", "text": "Olá joia, Bem-Vindo ao campus"},
-	{"speaker": "Player", "text": "Obrigado!"}
+	{"speaker": "Diretor", "text": "Olá, meu caro amigo"},
+	{"speaker": "Diretor", "text": "Seja muito bem-vindo ao nosso instituto. Sabe qual é o nosso lema?"},
+	{"speaker": "Player", "text": "Ainda não… mas imagino que estou prestes a descobrir. Qual é?"},
+	{"speaker": "Diretor", "text": "Ora, jovem! Gosto do seu senso de humor. Nosso lema é:"},
+	{"speaker": "Diretor", "text": "Lapidando joias, construindo sonhos."},
+	{"speaker": "Diretor", "text": "Nossas joias são os alunos o maior bem que temos."},
+	{"speaker": "Diretor", "text": "Eles são bons garotos, só precisam de alguém por perto... Aliás, não era pra ter aula agora?"},
+	{"speaker": "Player", "text": "Estou... trabalhando nisso."},
+	{"speaker": "Diretor", "text": "Haha! Boa sorte, então. Ah, e a propósito..."},
+	{"speaker": "Diretor", "text": "talvez você já tenha ouvido que as coisas andam um pouco agitadas por aqui."},
+	{"speaker": "Diretor", "text": "Mas não se preocupe demais com isso... Nos veremos em breve. Você ainda tem muito pela frente."},
+	{"speaker": "Diretor", "text": "E, aliás, gostei dos seus sapatos! Hahaha!"}
+
+
+
 ]
 
 var retratos= {
@@ -70,10 +83,10 @@ func proxima_fala():
 
 func mostrar_texto_com_efeito(texto):
 	som_fala.play()
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	som_fala.stop()
 	pode_avancar = true
 

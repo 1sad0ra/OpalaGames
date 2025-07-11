@@ -128,7 +128,7 @@ position = Vector2(160, 492)
 position = Vector2(752, 373)
 
 [node name="willames" parent="." instance=ExtResource("11_ts74w")]
-position = Vector2(696, 548)
+position = Vector2(931, 651)
 
 [node name="isadora" parent="." instance=ExtResource("12_1ubxq")]
 position = Vector2(-104, 456)

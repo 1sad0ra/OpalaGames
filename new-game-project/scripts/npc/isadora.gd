@@ -14,10 +14,13 @@ var pode_avancar = false
 var fala_index = 0
 
 var falas = [
-	{"speaker": "Isadora", "text": "Boa noite! O senhor deve ser o novo professor substituto. Bem-vindo ao campus."},
-	{"speaker": "Isadora", "text": "Ultimamente, as coisas andam bem agitadas, mas ninguém sabe ao certo o porquê… Deve ser por causa da troca constante de professores."},
-	{"speaker": "Isadora", "text": "Ninguém permanece por muito tempo… vai saber, né?"},
-	{"speaker": "Player", "text": "Obrigado!"}
+	{"speaker": "Isadora", "text": "Boa noite! O senhor deve ser o novo professor substituto."},
+	{"speaker": "Isadora", "text": "Bem-vindo ao campus."},
+	{"speaker": "Player", "text": " Boa Noite, Obrigado!"},
+	{"speaker": "Isadora", "text": "Ultimamente, as coisas andam bem agitadas, mas ninguém sabe ao certo o porquê… "},
+	{"speaker": "Isadora", "text": " Deve ser por causa da troca constante de professores."},
+	{"speaker": "Isadora", "text": "Ninguém permanece por muito tempo… vai saber, né?"}
+
 ]
 
 var retratos= {
@@ -78,11 +81,12 @@ func proxima_fala():
 
 func mostrar_texto_com_efeito(texto):
 	som_fala.play()
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	for letra in texto:
 		texto_dialogo.text += letra
-		await get_tree().create_timer(0.005).timeout
+		await get_tree().create_timer(0.001).timeout
 	som_fala.stop()
+
 	pode_avancar = true
 
 func encerrar_dialogo():
