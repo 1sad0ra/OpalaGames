@@ -106,7 +106,6 @@ theme_override_font_sizes/font_size = 10
 
 [node name="robo" parent="." instance=ExtResource("4_b04w5")]
 texture_filter = 1
-<<<<<<< Updated upstream
 
 
 
@@ -115,9 +114,9 @@ position = Vector2(9, 30)
 Stashed changes
 
 
-=======
+
 position = Vector2(2, 25)
->>>>>>> Stashed changes
+
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
