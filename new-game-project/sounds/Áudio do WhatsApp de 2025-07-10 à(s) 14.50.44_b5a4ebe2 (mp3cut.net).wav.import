@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpvjeuprw01qv"
+path="res://.godot/imported/Áudio do WhatsApp de 2025-07-10 à(s) 14.50.44_b5a4ebe2 (mp3cut.net).wav-e9338856512cbb173b576460f89f955c.sample"
+
+[deps]
+
+source_file="res://sounds/Áudio do WhatsApp de 2025-07-10 à(s) 14.50.44_b5a4ebe2 (mp3cut.net).wav"
+dest_files=["res://.godot/imported/Áudio do WhatsApp de 2025-07-10 à(s) 14.50.44_b5a4ebe2 (mp3cut.net).wav-e9338856512cbb173b576460f89f955c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

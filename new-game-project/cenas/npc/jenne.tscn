@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dqj6oif0vamqc"]
+[gd_scene load_steps=22 format=3 uid="uid://dqj6oif0vamqc"]
 
 [ext_resource type="Script" uid="uid://ittn41vqy6wa" path="res://scripts/npc/jenne.gd" id="1_gsd7x"]
 [ext_resource type="Texture2D" uid="uid://bsd1vcd43lool" path="res://assets/Personagens/Janne/Jenni_pixilart-sprite.png" id="2_clu3g"]
 [ext_resource type="FontFile" uid="uid://dhq1kbwvasqme" path="res://assets/pixel_Fonte/pixelart.ttf" id="3_xrsdb"]
+[ext_resource type="AudioStream" uid="uid://drowsrs0bl38d" path="res://sounds/somfala.wav" id="4_7a3el"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrsdb"]
 atlas = ExtResource("2_clu3g")
@@ -182,6 +183,9 @@ offset_right = 35.0
 offset_bottom = -26.0
 label_settings = SubResource("LabelSettings_pt8xt")
 horizontal_alignment = 1
+
+[node name="SomFala" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7a3el")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
