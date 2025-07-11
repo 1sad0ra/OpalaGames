@@ -17,8 +17,27 @@ func ativar_interacao():
 	pode_interagir = true
 
 var falas = [
-	{"speaker": "Bipi", "text": "Olá, Boa noite!"},
-	{"speaker": "Player", "text": "Bem-vindo ao campus."},
+[
+  {"speaker": "Bipi", "text": "Olá..."},
+  {"speaker": "Bipi", "text": "Obrigado por me libertar."},
+  {"speaker": "Player", "text": "Mas... o que é isso?"},
+  {"speaker": "Bipi", "text": "Olá, humano."},
+  {"speaker": "Bipi", "text": "Sou o projeto ALFA-07."},
+  {"speaker": "Bipi", "text": "Antes de me aprisionarem aqui, meus criadores me chamavam carinhosamente de Bipi."},
+  {"speaker": "Bipi", "text": "Fui desligado por não atender às expectativas…"},
+  {"speaker": "Bipi", "text": "Os humanos... podem ser cruéis."},
+  {"speaker": "Player", "text": "Você estava trancado esse tempo todo?"},
+  {"speaker": "Player", "text": "Por quanto tempo? Que tipo de tecnologia é você?"},
+  {"speaker": "Bipi", "text": "Eu te contarei tudo..."},
+  {"speaker": "Bipi", "text": "Mas, por favor  não diga a ninguém que me encontrou."},
+  {"speaker": "Bipi", "text": "Se souberem, podem acabar comigo de vez."},
+  {"speaker": "Bipi", "text": "Já estou fraco."},
+  {"speaker": "Bipi", "text": "Levaram boa parte do meu hardware…"},
+  {"speaker": "Bipi", "text": "Eu não funciono como antes."},
+  {"speaker": "Bipi", "text": "Pode me ajudar?"},
+  {"speaker": "Player", "text": "..."}
+]
+
 ]
 
 var retratos= {
