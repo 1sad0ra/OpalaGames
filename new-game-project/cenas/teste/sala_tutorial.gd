@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var player = $player
 @onready var posicoes_entrada = $posicoes_entrada
-@onready var mensagem_ui = $mensagemUI
 
 func _ready():
 	await get_tree().process_frame
