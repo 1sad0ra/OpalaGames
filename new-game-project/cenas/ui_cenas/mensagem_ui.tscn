@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bp6sxjp2ti46e"]
 
-[ext_resource type="Script" uid="uid://l4koawy0vlvm" path="res://cenas/interações/mensagem_ui.gd" id="1_ppce1"]
+[ext_resource type="Script" uid="uid://l4koawy0vlvm" path="res://scripts/ui_scripts/mensagem_ui.gd" id="1_ppce1"]
 
 [node name="mensagemUI" type="CanvasLayer"]
 script = ExtResource("1_ppce1")

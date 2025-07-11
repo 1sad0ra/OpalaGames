@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cwxfxbvq16bpt" path="res://cenas/enigmas/enigma_1.tscn" id="5_aicvf"]
 [ext_resource type="PackedScene" uid="uid://be6ui16d1pi1k" path="res://cenas/enigmas/cofre_1.tscn" id="6_6x3py"]
 [ext_resource type="PackedScene" uid="uid://c2jeogadomjoo" path="res://cenas/enigmas/ui_papel.tscn" id="6_tfqeb"]
-[ext_resource type="PackedScene" uid="uid://bp6sxjp2ti46e" path="res://cenas/interações/mensagem_ui.tscn" id="7_tfqeb"]
+[ext_resource type="PackedScene" uid="uid://bp6sxjp2ti46e" path="res://cenas/ui_cenas/mensagem_ui.tscn" id="7_tfqeb"]
 [ext_resource type="PackedScene" uid="uid://b6swet5ftgsvp" path="res://cenas/ui_cenas/resposta_menu.tscn" id="7_trwv6"]
 [ext_resource type="PackedScene" uid="uid://dgr6d5yd7wclw" path="res://cenas/enigmas/papel_cofre.tscn" id="10_ty23l"]
 [ext_resource type="PackedScene" uid="uid://dq53sbkde1vrg" path="res://cenas/interações/armario1.tscn" id="13_ik8u1"]

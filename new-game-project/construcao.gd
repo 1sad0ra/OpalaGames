@@ -4,7 +4,7 @@ extends Area2D
 
 @onready var label_interacao: Label = $LabelInteracao
 @onready var fala_label: Label = $FalaLabel
-@onready var som_fala: AudioStreamPlayer2D = $SomFala
+'@onready var som_fala: AudioStreamPlayer2D = $SomFala'
 
 var player_perto := false
 var mostrando_fala := false
@@ -40,5 +40,5 @@ func _process(delta):
 		fala_label.visible = true
 		mostrando_fala = true
 		tempo = 0.0
-		if som_fala:
-			som_fala.play()
+		'	if som_fala:
+			som_fala.play()'

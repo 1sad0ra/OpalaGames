@@ -11,8 +11,8 @@ func _ready():
 		button.mouse_entered.connect(_on_button_hover)
 		button.pressed.connect(_on_button_pressed)
 
-func _process(delta):
-	pass
+'func _process(delta):
+	pass'
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
