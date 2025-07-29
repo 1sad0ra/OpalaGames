@@ -76,8 +76,8 @@ Isadora Sousa
 | Etapa                   | Status       | Previsão           |
 |------------------------|--------------|--------------------|
 | Planejamento           | ✅ Concluído | Maio/2025          |
-| Desenvolvimento        | 🔄 Em andamento | Junho/2025      |
-| Apresentação (protótipo) | 📅 Em breve  | 09 a 11 de julho/2025 |
+| Desenvolvimento        | ✅ Concluído | Junho/2025      |
+| Apresentação (protótipo) | ✅ Concluído  | 09 a 11 de julho/2025 |
 
 ---
 
